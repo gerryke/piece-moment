@@ -20,6 +20,7 @@ python3 -m http.server 4321
 
 - GitHub Pages，仓库 `gerryke/piece-moment`（项目页），线上 **https://gerryke.github.io/piece-moment/**，`main` 分支 push 即自动发布（约 30–60s）。
 - 刻意放在 `/piece-moment/` 子路径而非根域名（根域名留给将来的其他 App）。**因此站内所有路径必须是相对路径**（`assets/...`、`privacy.html`），不能用 `/assets/...` 这种绝对路径，否则换到子路径会 404。绝对 URL 只用于跨站链接和 og:image。
+- **缓存破除**：`style.css` / `app.js` / 复用文件名的图片（如 `rank-chart.jpg`）在引用时带 `?v=N` 版本号。改了这些文件后**把版本号 +1**，否则浏览器/CDN 会继续吃旧缓存（症状：用户说"没变化"）。
 
 ## i18n 架构（改文案前必读）
 
