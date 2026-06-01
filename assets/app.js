@@ -37,7 +37,7 @@
     "pf.s2l":        { en:"Top Paid iPad Apps", zh:"付费 iPad App 榜", zht:"付費 iPad App 榜", ja:"有料 iPad App" },
     "pf.s3n":        { en:"Top 50", zh:"前 50", zht:"前 50", ja:"Top 50" },
     "pf.s3l":        { en:"App Store Family chart", zh:"App Store 家庭榜", zht:"App Store 家庭榜", ja:"ファミリー総合" },
-    "pf.note":       { en:"Ranked alongside Monument Valley, Hitman GO, MONOPOLY and other classics.", zh:"与《纪念碑谷》《Hitman GO》《大富翁》等经典付费游戏同列。", zht:"與《紀念碑谷》《Hitman GO》《大富翁》等經典付費遊戲同列。", ja:"『Monument Valley』『Hitman GO』『MONOPOLY』など名作と並びました。" },
+    "pf.note":       { en:"Ranked alongside Monument Valley, Hitman GO, and Rusty Lake.", zh:"与《纪念碑谷》《Hitman GO》《Rusty Lake》等经典同列。", zht:"與《紀念碑谷》《Hitman GO》《Rusty Lake》等經典同列。", ja:"『Monument Valley』『Hitman GO』『Rusty Lake』など名作と並びました。" },
     "pf.cap":        { en:"Paid iPad Apps · App Store", zh:"付费 iPad App 排行 · App Store", zht:"付費 iPad App 排行 · App Store", ja:"有料 iPad App ランキング · App Store" },
 
     "dl.h":          { en:"Take a little <em>Piece Moment.</em>", zh:"给自己，留一个<em>片刻。</em>", zht:"給自己，留一個<em>片刻。</em>", ja:"ほんの少し、<em>Piece&nbsp;Moment&nbsp;を。</em>" },
