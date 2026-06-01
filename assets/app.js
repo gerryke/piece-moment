@@ -18,7 +18,7 @@
     "c1.h":          { en:"Calm collections", zh:"柔和图库", zht:"柔和圖庫", ja:"やさしい画像コレクション" },
     "c1.p":          { en:"Gentle, themed picture collections — seasons, nature, food, and more. There's always one to match your mood.", zh:"柔和的主题图库——四季、自然、美食……总有一张，合你此刻的心情。", zht:"柔和的主題圖庫——四季、自然、美食……總有一張，合你此刻的心情。", ja:"四季・自然・食べ物など、やさしいテーマの画像コレクション。今の気分に合う一枚がきっと見つかります。" },
     "c2.h":          { en:"Play your way", zh:"你的节奏", zht:"你的節奏", ja:"自分のペースで" },
-    "c2.p":          { en:"Easy or challenging grids, three piece shapes. Move each piece without pressure — and your progress saves automatically.", zh:"从简单到挑战的格子，三种拼图形状。不用赶时间，一片一片慢慢放——进度还会自动保存。", zht:"從簡單到挑戰的格子，三種拼圖形狀。不用趕時間，一片一片慢慢放——進度還會自動保存。", ja:"やさしい難易度から手ごたえのあるものまで、ピースの形は3種類。急がず一片ずつ。進行状況は自動で保存されます。" },
+    "c2.p":          { en:"Easy or challenging grids, two piece shapes. Move each piece without pressure — and your progress saves automatically.", zh:"从简单到挑战的格子，两种拼图形状。不用赶时间，一片一片慢慢放——进度还会自动保存。", zht:"從簡單到挑戰的格子，兩種拼圖形狀。不用趕時間，一片一片慢慢放——進度還會自動保存。", ja:"やさしい難易度から手ごたえのあるものまで、ピースの形は2種類。急がず一片ずつ。進行状況は自動で保存されます。" },
     "c3.h":          { en:"Calm by design", zh:"纯净体验", zht:"純淨體驗", ja:"静けさのための設計" },
     "c3.p":          { en:"No ads, no account, no network needed. Open it anytime, anywhere, and just breathe for a minute.", zh:"没有广告，不需账号，不需联网。随时随地打开，给自己一分钟，好好呼吸。", zht:"沒有廣告，不需帳號，不需連網。隨時隨地打開，給自己一分鐘，好好呼吸。", ja:"広告なし、アカウント不要、ネット接続も不要。いつでもどこでも開いて、ひと息つきましょう。" },
     "c4.h":          { en:"Your own moments", zh:"你自己的记忆", zht:"你自己的記憶", ja:"あなただけの思い出" },
