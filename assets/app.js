@@ -4,13 +4,13 @@
     "nav.dl":        { en:"Download on the", zh:"前往", zht:"前往", ja:"ダウンロード" },
 
     "hero.eyebrow":  { en:"Relaxing Jigsaw Puzzles", zh:"轻松拼一张图", zht:"放鬆療癒的拼圖", ja:"静かに楽しむ癒しのパズル" },
-    "hero.h1":       { en:"Slow down.<br>One piece <em>at&nbsp;a&nbsp;time.</em>", zh:"慢下来，<br>一次<em>拼一张图。</em>", zht:"慢一點，<br>一次<em>拼一張圖。</em>", ja:"ゆっくりと。<br>一片ずつ、<em>自分のペースで。</em>" },
-    "hero.lead":     { en:"Choose a picture, relax for a moment, and enjoy putting it back together at your own pace. No ads. No network. Just a quiet little break in your day.", zh:"选一张喜欢的图片，慢慢拼一会儿。没有广告，无需网络——只是给一天里的自己，留一个安静的片刻。", zht:"選一張喜歡的圖片，慢慢拼一會兒。沒有廣告，不需網路——只是給一天裡的自己，留一個安靜的片刻。", ja:"好きな写真を選んで、ゆっくり組み立てる。広告なし、ネット接続も不要。一日の中の、静かなひとときを。" },
+    "hero.h1":       { en:"A quiet, relaxing<br><em>jigsaw&nbsp;puzzle.</em>", zh:"安静、放松的<br><em>拼图游戏。</em>", zht:"安靜、放鬆的<br><em>拼圖遊戲。</em>", ja:"静かで心ほぐれる<br><em>ジグソーパズル。</em>" },
+    "hero.lead":     { en:"Open it before bed, on a break, or whenever you want to slow down. Browse the built-in collections, pick a difficulty, and finish at your own pace — no account, no ads, no network needed.", zh:"适合在睡前、休息时，或想让自己慢下来的时候打开。浏览内建的图片收藏，挑选拼图难度，按照自己的节奏慢慢完成——不需登录账号，没有广告，也不需要联网。", zht:"適合在睡前、休息時，或想讓自己慢下來的時候打開。瀏覽內建的圖片收藏，挑選拼圖難度，按照自己的節奏慢慢完成——不需登入帳號，沒有廣告，也不需網路連線。", ja:"寝る前や休憩中、少し落ち着きたいときに。内蔵の画像コレクションから選び、難易度を決めて、自分のペースで仕上げる——アカウント不要、広告なし、ネット接続も不要。" },
     "hero.m1":       { en:"No ads", zh:"无广告", zht:"無廣告", ja:"広告なし" },
     "hero.m2":       { en:"Offline", zh:"可离线", zht:"可離線", ja:"オフライン" },
-    "hero.m3":       { en:"Free to start", zh:"免费开始", zht:"免費開始", ja:"無料で開始" },
+    "hero.m3":       { en:"No account", zh:"无需账号", zht:"不需帳號", ja:"アカウント不要" },
 
-    "man.h":         { en:"A relaxing jigsaw puzzle for the small, quiet spaces in your day. <span class='soft'>Not about speed or scores — just the calm of watching a picture come back together.</span>", zh:"一款安静放松的拼图，陪你度过一天里那些小小的空隙。<span class='soft'>无关速度，无关分数——只享受画面重新完整起来的那份平静。</span>", zht:"一款安靜放鬆的拼圖，陪你度過一天裡那些小小的空隙。<span class='soft'>無關速度，無關分數——只享受畫面重新完整起來的那份平靜。</span>", ja:"忙しい一日の、小さな静かなすき間のためのパズル。<span class='soft'>速さも点数も関係なく、ただ絵が元に戻っていく穏やかさを。</span>" },
+    "man.h":         { en:"A quiet puzzle for before bed, for breaks, for whenever you want to slow down. <span class='soft'>No scores to chase — just focus, calm, and a picture coming back together.</span>", zh:"一款适合睡前、休息，或想慢下来时打开的安静拼图。<span class='soft'>没有分数要追赶——只有专注、放松，和画面重新完整起来的过程。</span>", zht:"一款適合睡前、休息，或想慢下來時打開的安靜拼圖。<span class='soft'>沒有分數要追趕——只有專注、放鬆，和畫面重新完整起來的過程。</span>", ja:"寝る前にも、休憩にも、少し落ち着きたいときにも。<span class='soft'>競う点数はなく、あるのは集中と、安らぎと、絵が戻っていく時間だけ。</span>" },
 
     "feat.eyebrow":  { en:"Made to feel calm", zh:"为放松而设计", zht:"為放鬆而設計", ja:"心が落ち着く設計" },
     "feat.h":        { en:"Everything here slows you down", zh:"这里的一切，都让你慢下来", zht:"這裡的一切，都讓你慢下來", ja:"ここにあるすべてが、あなたをゆっくりに" },
@@ -18,9 +18,9 @@
     "c1.h":          { en:"Calm collections", zh:"柔和图库", zht:"柔和圖庫", ja:"やさしい画像コレクション" },
     "c1.p":          { en:"Gentle, themed picture collections — seasons, nature, food, and more. There's always one to match your mood.", zh:"柔和的主题图库——四季、自然、美食……总有一张，合你此刻的心情。", zht:"柔和的主題圖庫——四季、自然、美食……總有一張，合你此刻的心情。", ja:"四季・自然・食べ物など、やさしいテーマの画像コレクション。今の気分に合う一枚がきっと見つかります。" },
     "c2.h":          { en:"Play your way", zh:"你的节奏", zht:"你的節奏", ja:"自分のペースで" },
-    "c2.p":          { en:"Easy or challenging grids, three piece shapes. Move each piece without pressure — your pace, your rules.", zh:"从简单到挑战的格子，三种拼图形状。不用赶时间，一片一片慢慢放——你的节奏，你说了算。", zht:"從簡單到挑戰的格子，三種拼圖形狀。不用趕時間，一片一片慢慢放——你的節奏，你說了算。", ja:"やさしい難易度から手ごたえのあるものまで、ピースの形は3種類。急がず一片ずつ、あなたのペースで。" },
+    "c2.p":          { en:"Easy or challenging grids, three piece shapes. Move each piece without pressure — and your progress saves automatically.", zh:"从简单到挑战的格子，三种拼图形状。不用赶时间，一片一片慢慢放——进度还会自动保存。", zht:"從簡單到挑戰的格子，三種拼圖形狀。不用趕時間，一片一片慢慢放——進度還會自動保存。", ja:"やさしい難易度から手ごたえのあるものまで、ピースの形は3種類。急がず一片ずつ。進行状況は自動で保存されます。" },
     "c3.h":          { en:"Calm by design", zh:"纯净体验", zht:"純淨體驗", ja:"静けさのための設計" },
-    "c3.p":          { en:"No ads. No network needed. No rush. Open it anytime, anywhere, and just breathe for a minute.", zh:"没有广告，无需联网，不必着急。随时随地打开，给自己一分钟，好好呼吸。", zht:"沒有廣告，不需連網，不必著急。隨時隨地打開，給自己一分鐘，好好呼吸。", ja:"広告なし、ネット接続不要、急ぐ必要もなし。いつでもどこでも開いて、ひと息つきましょう。" },
+    "c3.p":          { en:"No ads, no account, no network needed. Open it anytime, anywhere, and just breathe for a minute.", zh:"没有广告，不需账号，不需联网。随时随地打开，给自己一分钟，好好呼吸。", zht:"沒有廣告，不需帳號，不需連網。隨時隨地打開，給自己一分鐘，好好呼吸。", ja:"広告なし、アカウント不要、ネット接続も不要。いつでもどこでも開いて、ひと息つきましょう。" },
     "c4.h":          { en:"Your own moments", zh:"你自己的记忆", zht:"你自己的記憶", ja:"あなただけの思い出" },
     "c4.p":          { en:"Bring in your own photos. A child's drawing, a favorite meal, a travel snapshot — turn it into a puzzle to return to.", zh:"导入你自己的照片。孩子的一幅画、喜欢的一餐、旅途的一张照片——都能变成一张值得回来拼的拼图。", zht:"匯入你自己的照片。孩子的一幅畫、喜歡的一餐、旅途的一張照片——都能變成一張值得回來拼的拼圖。", ja:"自分の写真を取り込んで。子どもの絵、お気に入りの食事、旅先の一枚を、また戻ってきたくなるパズルに。" },
 
@@ -32,7 +32,7 @@
     "bt.p":          { en:"Piece it together, one quiet minute at a time — and keep the finished moment, with a title and a note, if you like.", zh:"一片一片，拼回属于你的安静几分钟——若你愿意，还能为完成的那一刻，留下一个名字和一句话。", zht:"一片一片，拼回屬於你的安靜幾分鐘——若你願意，還能為完成的那一刻，留下一個名字和一句話。", ja:"一片ずつ、静かな数分を組み立てて。よければ、完成したその瞬間に、タイトルとひとことを残せます。" },
 
     "dl.h":          { en:"Take a little <em>Piece Moment.</em>", zh:"给自己，留一个<em>片刻。</em>", zht:"給自己，留一個<em>片刻。</em>", ja:"ほんの少し、<em>Piece&nbsp;Moment&nbsp;を。</em>" },
-    "dl.p":          { en:"One picture at a time. Free to start on the App Store.", zh:"一次拼一张图。在 App Store 免费开始。", zht:"一次拼一張圖。在 App Store 免費開始。", ja:"一度に一枚ずつ。App Store で無料で始められます。" },
+    "dl.p":          { en:"Set aside a little time for yourself, and piece a picture back together.", zh:"把一小段时间留给自己，慢慢拼回眼前的画面。", zht:"把一小段時間留給自己，慢慢拼回眼前的畫面。", ja:"ほんの少しの時間を自分のために。目の前の絵を、ゆっくり戻していく。" },
 
     "f.support":     { en:"Support", zh:"支持", zht:"支援", ja:"サポート" },
     "f.privacy":     { en:"Privacy", zh:"隐私政策", zht:"隱私權政策", ja:"プライバシー" },
