@@ -62,8 +62,15 @@
   var LANGS = ["en","zh","zht","ja"];
 
   // ---------------- 语言切换 ----------------
+  // 优先级：URL 参数（?lang= 或 #lang）> localStorage 记忆 > 默认英文
   var saved = localStorage.getItem("pm_lang");
   if (LANGS.indexOf(saved) < 0) saved = "en";
+  try {
+    var qp = new URLSearchParams(location.search).get("lang");
+    var hl = (location.hash || "").replace(/^#/, "");
+    var urlLang = LANGS.indexOf(qp) >= 0 ? qp : (LANGS.indexOf(hl) >= 0 ? hl : null);
+    if (urlLang) saved = urlLang;
+  } catch (e) {}
 
   function apply(lang) {
     document.documentElement.lang = HTMLLANG[lang] || "en";
