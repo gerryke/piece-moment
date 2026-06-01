@@ -31,6 +31,15 @@
     "bt.h":          { en:"Every picture is a small study in texture, color, and calm.", zh:"每一张图，都是一次关于质地、色彩与安宁的小小凝视。", zht:"每一張圖，都是一次關於質地、色彩與安寧的小小凝視。", ja:"どの一枚も、質感と色と静けさをめぐる小さな観察。" },
     "bt.p":          { en:"Piece it together, one quiet minute at a time — and keep the finished moment, with a title and a note, if you like.", zh:"一片一片，拼回属于你的安静几分钟——若你愿意，还能为完成的那一刻，留下一个名字和一句话。", zht:"一片一片，拼回屬於你的安靜幾分鐘——若你願意，還能為完成的那一刻，留下一個名字和一句話。", ja:"一片ずつ、静かな数分を組み立てて。よければ、完成したその瞬間に、タイトルとひとことを残せます。" },
 
+    "pf.eyebrow":    { en:"Ranked on the App Store", zh:"曾登上 App Store 付费榜", zht:"曾登上 App Store 付費榜", ja:"App Store 有料ランキング実績" },
+    "pf.h":          { en:"A quiet little app that found its place among the classics.", zh:"一个安静的小 App，曾跻身经典之列。", zht:"一個安靜的小 App，曾躋身經典之列。", ja:"静かな小さなアプリが、名作たちと肩を並べた瞬間。" },
+    "pf.s1l":        { en:"Paid Family Games", zh:"付费家庭游戏榜", zht:"付費家庭遊戲榜", ja:"有料ファミリー" },
+    "pf.s2l":        { en:"Top Paid iPad Apps", zh:"付费 iPad App 榜", zht:"付費 iPad App 榜", ja:"有料 iPad App" },
+    "pf.s3n":        { en:"Top 50", zh:"前 50", zht:"前 50", ja:"Top 50" },
+    "pf.s3l":        { en:"App Store Family chart", zh:"App Store 家庭榜", zht:"App Store 家庭榜", ja:"ファミリー総合" },
+    "pf.note":       { en:"Ranked alongside Monument Valley, Hitman GO, MONOPOLY and other classics.", zh:"与《纪念碑谷》《Hitman GO》《大富翁》等经典付费游戏同列。", zht:"與《紀念碑谷》《Hitman GO》《大富翁》等經典付費遊戲同列。", ja:"『Monument Valley』『Hitman GO』『MONOPOLY』など名作と並びました。" },
+    "pf.cap":        { en:"Paid iPad Apps · App Store", zh:"付费 iPad App 排行 · App Store", zht:"付費 iPad App 排行 · App Store", ja:"有料 iPad App ランキング · App Store" },
+
     "dl.h":          { en:"Take a little <em>Piece Moment.</em>", zh:"给自己，留一个<em>片刻。</em>", zht:"給自己，留一個<em>片刻。</em>", ja:"ほんの少し、<em>Piece&nbsp;Moment&nbsp;を。</em>" },
     "dl.p":          { en:"Set aside a little time for yourself, and piece a picture back together.", zh:"把一小段时间留给自己，慢慢拼回眼前的画面。", zht:"把一小段時間留給自己，慢慢拼回眼前的畫面。", ja:"ほんの少しの時間を自分のために。目の前の絵を、ゆっくり戻していく。" },
 
