@@ -36,4 +36,8 @@ docs/superpowers/specs/ # 设计 spec
 
 ## 部署
 
-静态托管即可（GitHub Pages / Cloudflare Pages）。连接本仓库后，`main` 分支每次 push 自动构建发布。
+GitHub Pages（项目页），线上地址 **https://gerryke.github.io/piece-moment/**，`main` 分支每次 push 自动发布。仓库刻意放在子路径而非根域名，方便将来不同 App 各占一个子文件夹。
+
+### 语言直达
+
+URL 追加 `?lang=zh`（简）/ `?lang=zht`（繁）/ `?lang=ja`（日）可直达指定语言，优先级高于浏览器记忆。用于 App Store Connect 各语言 Marketing URL。
