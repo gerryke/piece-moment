@@ -14,7 +14,10 @@ python3 -m http.server 4321
 ## 结构
 
 ```
-index.html              # 营销主页（双语，内联 CSS/JS）
+index.html              # 营销主页
+privacy.html            # 隐私政策页（同风格）
+assets/style.css        # 共享样式
+assets/app.js           # 共享逻辑：i18n 字典 + 导航吸顶 + 滚动揭示
 assets/img/             # 图标、截图、主视觉（已压到网页尺寸）
 concepts/               # 主视觉方向探索稿（A/B/C 对比，内部参考）
 docs/superpowers/specs/ # 设计 spec
@@ -22,15 +25,14 @@ docs/superpowers/specs/ # 设计 spec
 
 ## 特性
 
-- 中英双语切换（右上角 EN / 中，localStorage 记忆）
+- 四语切换：EN / 简 / 繁 / 日（右上角，localStorage 记忆）。所有文案集中在 `assets/app.js` 的 `I18N` 字典，元素用 `data-i18n="key"` 引用。
 - 移动端与桌面端同等优化
 - 滚动揭示动效，尊重 `prefers-reduced-motion`
-- 字体：Fraunces（标题）+ Hanken Grotesk（正文）+ Noto Serif SC（中文）
+- 字体：Fraunces（拉丁标题）+ Hanken Grotesk（正文）+ Noto Sans JP（日文）+ Noto Serif SC（中文）
 
-## 待替换占位
+## 文案来源
 
-- App Store 链接：当前用 `https://apps.apple.com/app/id6770564963`（需确认）
-- 页脚隐私政策链接、联系邮箱
+四语文案语气对齐 App Store 上架文案（见 jigsaw 源码仓库 `screenshots/app-store/app-store-listing-copy.md`）。
 
 ## 部署
 

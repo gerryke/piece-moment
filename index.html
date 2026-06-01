@@ -12,166 +12,8 @@
 <link rel="apple-touch-icon" href="assets/img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#FAFAF6; --mist:#E9F0F5; --mist-deep:#D7E2EC;
-    --sage:#A7BCAB; --sage-soft:#D4E0D6;
-    --ink:#2C3138; --ink-soft:#565d66; --muted:#8b9099;
-    --line:rgba(44,49,56,.10);
-    --shadow:0 30px 60px -20px rgba(60,72,88,.28);
-    --shadow-sm:0 12px 30px -12px rgba(60,72,88,.30);
-    --serif:"Fraunces",Georgia,serif;
-    --sans:"Hanken Grotesk","Noto Serif SC",-apple-system,sans-serif;
-    --maxw:1140px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  img{display:block;max-width:100%}
-  a{text-decoration:none;color:inherit}
-  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  section{position:relative}
-
-  h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;line-height:1.05}
-  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.2em;
-    text-transform:uppercase;color:var(--sage);font-weight:600}
-  .eyebrow .d{width:6px;height:6px;border-radius:50%;background:var(--sage)}
-
-  /* App Store 按钮 */
-  .appstore{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:#fff;
-    padding:13px 24px 13px 20px;border-radius:14px;box-shadow:var(--shadow-sm);
-    transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
-  .appstore:hover{transform:translateY(-3px);box-shadow:0 22px 40px -16px rgba(60,72,88,.45)}
-  .appstore svg{width:24px;height:24px;flex:none}
-  .appstore .t small{display:block;font-size:10px;letter-spacing:.04em;opacity:.72;font-weight:400;line-height:1.1}
-  .appstore .t span{display:block;font-size:17px;line-height:1.15;font-weight:600}
-  .appstore.sm{padding:9px 16px 9px 14px}.appstore.sm svg{width:18px;height:18px}
-  .appstore.sm .t small{font-size:8px}.appstore.sm .t span{font-size:13px}
-
-  /* ---------- 导航 ---------- */
-  .nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,box-shadow .4s,padding .4s;
-    padding:20px 0}
-  .nav.solid{background:rgba(250,250,246,.82);backdrop-filter:blur(14px) saturate(1.2);
-    box-shadow:0 1px 0 var(--line);padding:13px 0}
-  .nav .row{display:flex;align-items:center;justify-content:space-between}
-  .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink)}
-  .brand img{width:34px;height:34px;border-radius:9px;box-shadow:var(--shadow-sm)}
-  .nav-right{display:flex;align-items:center;gap:18px}
-  .lang{display:inline-flex;border:1px solid var(--line);border-radius:100px;overflow:hidden;font-size:13px;font-weight:500}
-  .lang button{background:none;border:none;padding:6px 13px;cursor:pointer;color:var(--muted);font-family:var(--sans);transition:.25s}
-  .lang button.on{background:var(--ink);color:#fff}
-
-  /* ---------- Hero ---------- */
-  .hero{padding:150px 0 90px;background:radial-gradient(120% 90% at 80% -10%, #fff 0%, var(--mist) 48%, var(--paper) 100%);overflow:hidden}
-  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
-  .hero h1{font-size:clamp(42px,5.8vw,72px)}
-  .hero h1 em{font-style:italic;color:var(--sage)}
-  .hero .lead{margin:26px 0 34px;font-size:17px;line-height:1.72;color:var(--ink-soft);max-width:430px;font-weight:300}
-  .cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-  .meta{font-size:13px;color:var(--muted)}.meta .dot{margin:0 8px;opacity:.5}
-  .hero .eyebrow{margin-bottom:22px}
-  .stage{position:relative;display:flex;justify-content:center}
-  .phone{position:relative;width:286px;border-radius:44px;background:#1d2228;padding:11px;
-    box-shadow:0 55px 100px -34px rgba(40,52,66,.55);transform:rotate(3deg)}
-  .phone img{border-radius:34px;width:100%}
-  .phone .notch{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:112px;height:27px;
-    background:#1d2228;border-radius:0 0 17px 17px;z-index:2}
-  .fp{width:76px;height:76px;border-radius:24%;background:var(--sage-soft);position:absolute;
-    box-shadow:inset 0 2px 8px rgba(255,255,255,.7),0 16px 30px -14px rgba(96,116,98,.55);opacity:.92}
-  .fp::after{content:"";position:absolute;width:36%;height:36%;border-radius:50%;background:inherit;box-shadow:inherit}
-  .fp1{left:-30px;top:16%;transform:rotate(-14deg);animation:float 8s ease-in-out infinite;--r:-14deg}
-  .fp1::after{right:-15%;top:32%}
-  .fp2{right:-20px;bottom:13%;width:58px;height:58px;transform:rotate(12deg);animation:float 10s ease-in-out infinite .5s;--r:12deg}
-  .fp2::after{bottom:-15%;left:30%}
-
-  /* ---------- 主张 ---------- */
-  .manifesto{padding:118px 0;text-align:center}
-  .manifesto h2{font-size:clamp(28px,4.2vw,46px);max-width:880px;margin:0 auto;line-height:1.22;color:var(--ink)}
-  .manifesto h2 .soft{color:var(--muted)}
-  .manifesto .rule{width:40px;height:1px;background:var(--line);margin:38px auto 0}
-
-  /* ---------- 特性 ---------- */
-  .features{padding:40px 0 110px}
-  .features .head{text-align:center;margin-bottom:58px}
-  .features .head h2{font-size:clamp(30px,4vw,46px);margin-top:14px}
-  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 26px;
-    box-shadow:0 18px 40px -28px rgba(60,72,88,.4);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
-  .card:hover{transform:translateY(-6px);box-shadow:0 30px 55px -28px rgba(60,72,88,.5)}
-  .card .ic{width:46px;height:46px;border-radius:13px;background:var(--mist);display:grid;place-items:center;margin-bottom:20px}
-  .card .ic svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-  .card h3{font-size:21px;margin-bottom:10px}
-  .card p{font-size:14.5px;line-height:1.62;color:var(--ink-soft);font-weight:300}
-
-  /* ---------- 截图画廊 ---------- */
-  .gallery{padding:96px 0;background:linear-gradient(180deg,var(--paper),var(--mist) 60%,var(--paper))}
-  .gallery .head{text-align:center;margin-bottom:48px}
-  .gallery .head h2{font-size:clamp(30px,4vw,46px);margin-top:14px}
-  .rail{display:flex;gap:24px;overflow-x:auto;padding:14px 28px 30px;scroll-snap-type:x mandatory;
-    -webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .rail::-webkit-scrollbar{display:none}
-  .rail .shot{flex:none;width:236px;scroll-snap-align:center;border-radius:30px;padding:9px;background:#fff;
-    border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .4s}
-  .rail .shot:hover{transform:translateY(-8px)}
-  .rail .shot img{border-radius:23px}
-  .rail .spacer{flex:none;width:1px}
-
-  /* ---------- 内容之美 ---------- */
-  .beauty{position:relative;min-height:74vh;display:flex;align-items:center;overflow:hidden}
-  .beauty .bg{position:absolute;inset:0;background:url('assets/img/beauty-1.jpg') center/cover no-repeat;transform:scale(1.05)}
-  .beauty .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,28,24,.62) 0%,rgba(20,28,24,.30) 50%,rgba(20,28,24,.12) 100%)}
-  .beauty .wrap{position:relative;z-index:3}
-  .beauty .eyebrow{color:#cfe0d2}
-  .beauty .eyebrow .d{background:#cfe0d2}
-  .beauty h2{color:#fff;font-size:clamp(28px,4vw,48px);max-width:680px;margin:18px 0 0;line-height:1.18}
-  .beauty p{color:rgba(255,255,255,.82);max-width:480px;margin-top:22px;font-size:16px;line-height:1.7;font-weight:300}
-
-  /* ---------- 下载 CTA ---------- */
-  .download{padding:120px 0}
-  .download .box{background:radial-gradient(120% 130% at 50% 0%, #fff, var(--mist) 70%, var(--mist-deep));
-    border:1px solid var(--line);border-radius:34px;padding:74px 40px;text-align:center;box-shadow:var(--shadow)}
-  .download img.ic{width:84px;height:84px;border-radius:21px;margin:0 auto 26px;box-shadow:var(--shadow-sm)}
-  .download h2{font-size:clamp(32px,4.6vw,54px);margin-bottom:14px}
-  .download h2 em{font-style:italic;color:var(--sage)}
-  .download p{color:var(--ink-soft);margin-bottom:32px;font-weight:300}
-  .download .cta-row{justify-content:center}
-
-  /* ---------- 页脚 ---------- */
-  footer{padding:46px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
-  footer .row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-  footer .links{display:flex;gap:24px}
-  footer a:hover{color:var(--ink)}
-  footer .brand{font-size:17px;gap:9px;color:var(--ink-soft)}
-  footer .brand img{width:26px;height:26px;border-radius:7px}
-
-  /* ---------- 动效 ---------- */
-  @keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-16px) rotate(var(--r,0deg))}}
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
-  .reveal.in{opacity:1;transform:none}
-  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-  @media (prefers-reduced-motion:reduce){*{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.phone{transform:none}}
-
-  /* ---------- 响应式 ---------- */
-  @media (max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:860px){
-    .hero{padding:128px 0 70px}
-    .hero .grid{grid-template-columns:1fr;gap:50px;text-align:center}
-    .hero .lead{margin-left:auto;margin-right:auto}
-    .cta-row{justify-content:center}
-    .hero .eyebrow{justify-content:center}
-    .phone{transform:none;width:250px}
-    .manifesto{padding:84px 0}.features{padding:20px 0 80px}
-    .beauty{min-height:62vh}
-  }
-  @media (max-width:560px){
-    .cards{grid-template-columns:1fr}
-    .brand{font-size:19px}.brand img{width:30px;height:30px}
-    .nav-right{gap:11px}
-    .download .box{padding:54px 22px;border-radius:26px}
-    .wrap{padding:0 22px}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -182,11 +24,13 @@
     <div class="nav-right">
       <div class="lang" id="lang">
         <button data-lang="en" class="on">EN</button>
-        <button data-lang="zh">中</button>
+        <button data-lang="zh">简</button>
+        <button data-lang="zht">繁</button>
+        <button data-lang="ja">日</button>
       </div>
       <a class="appstore sm" href="https://apps.apple.com/app/id6770564963" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.23 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.28-1.27 3.13-2.53.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.75-4.14zM14.54 4.4c.71-.86 1.19-2.06 1.06-3.25-1.02.04-2.27.68-3 1.54-.65.76-1.23 1.98-1.07 3.15 1.14.09 2.3-.58 3.01-1.44z"/></svg>
-        <span class="t"><small data-en="Download on the" data-zh="前往">Download on the</small><span data-en="App Store" data-zh="App Store">App Store</span></span>
+        <span class="t"><small data-i18n="nav.dl">Download on the</small><span>App Store</span></span>
       </a>
     </div>
   </div>
@@ -198,15 +42,15 @@
 <section class="hero">
   <div class="wrap grid">
     <div class="copy">
-      <div class="eyebrow"><span class="d"></span><span data-en="Relaxing Jigsaw Puzzles" data-zh="轻松拼一张图">Relaxing Jigsaw Puzzles</span></div>
-      <h1 data-en="Slow down.<br>One piece <em>at a time.</em>" data-zh="慢下来，<br>一次<em>拼一张图。</em>">Slow down.<br>One piece <em>at a time.</em></h1>
-      <p class="lead" data-en="Choose a picture, relax for a moment, and enjoy putting it back together at your own pace. No ads. No network. Just a quiet little break in your day." data-zh="选一张喜欢的图片，慢慢拼一会儿。没有广告，无需网络——只是给一天里的自己，留一个安静的片刻。">Choose a picture, relax for a moment, and enjoy putting it back together at your own pace. No ads. No network. Just a quiet little break in your day.</p>
+      <div class="eyebrow"><span class="d"></span><span data-i18n="hero.eyebrow">Relaxing Jigsaw Puzzles</span></div>
+      <h1 data-i18n="hero.h1">Slow down.<br>One piece <em>at&nbsp;a&nbsp;time.</em></h1>
+      <p class="lead" data-i18n="hero.lead">Choose a picture, relax for a moment, and enjoy putting it back together at your own pace. No ads. No network. Just a quiet little break in your day.</p>
       <div class="cta-row">
         <a class="appstore" href="https://apps.apple.com/app/id6770564963" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.23 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.28-1.27 3.13-2.53.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.75-4.14zM14.54 4.4c.71-.86 1.19-2.06 1.06-3.25-1.02.04-2.27.68-3 1.54-.65.76-1.23 1.98-1.07 3.15 1.14.09 2.3-.58 3.01-1.44z"/></svg>
-          <span class="t"><small data-en="Download on the" data-zh="前往">Download on the</small><span>App Store</span></span>
+          <span class="t"><small data-i18n="nav.dl">Download on the</small><span>App Store</span></span>
         </a>
-        <span class="meta"><span data-en="No ads" data-zh="无广告">No ads</span><span class="dot">·</span><span data-en="Offline" data-zh="可离线">Offline</span><span class="dot">·</span><span data-en="Free to start" data-zh="免费开始">Free to start</span></span>
+        <span class="meta"><span data-i18n="hero.m1">No ads</span><span class="dot">·</span><span data-i18n="hero.m2">Offline</span><span class="dot">·</span><span data-i18n="hero.m3">Free to start</span></span>
       </div>
     </div>
     <div class="stage">
@@ -223,7 +67,7 @@
 <!-- ============ 主张 ============ -->
 <section class="manifesto">
   <div class="wrap">
-    <h2 class="reveal" data-en="A relaxing jigsaw puzzle for the small, quiet spaces in your day. <span class='soft'>Not about speed or scores — just the calm of watching a picture come back together.</span>" data-zh="一款安静放松的拼图，陪你度过一天里那些小小的空隙。<span class='soft'>无关速度，无关分数——只享受画面重新完整起来的那份平静。</span>">A relaxing jigsaw puzzle for the small, quiet spaces in your day. <span class="soft">Not about speed or scores — just the calm of watching a picture come back together.</span></h2>
+    <h2 class="reveal" data-i18n="man.h">A relaxing jigsaw puzzle for the small, quiet spaces in your day. <span class="soft">Not about speed or scores — just the calm of watching a picture come back together.</span></h2>
     <div class="rule reveal d1"></div>
   </div>
 </section>
@@ -232,29 +76,29 @@
 <section class="features">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow reveal"><span class="d"></span><span data-en="Made to feel calm" data-zh="为放松而设计">Made to feel calm</span></div>
-      <h2 class="reveal d1" data-en="Everything here slows you down" data-zh="这里的一切，都让你慢下来">Everything here slows you down</h2>
+      <div class="eyebrow reveal"><span class="d"></span><span data-i18n="feat.eyebrow">Made to feel calm</span></div>
+      <h2 class="reveal d1" data-i18n="feat.h">Everything here slows you down</h2>
     </div>
     <div class="cards">
       <div class="card reveal">
         <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-        <h3 data-en="Calm collections" data-zh="柔和图库">Calm collections</h3>
-        <p data-en="Gentle, themed picture collections — seasons, nature, food, and more. There's always one to match your mood." data-zh="柔和的主题图库——四季、自然、美食……总有一张，合你此刻的心情。">Gentle, themed picture collections — seasons, nature, food, and more. There's always one to match your mood.</p>
+        <h3 data-i18n="c1.h">Calm collections</h3>
+        <p data-i18n="c1.p">Gentle, themed picture collections — seasons, nature, food, and more. There's always one to match your mood.</p>
       </div>
       <div class="card reveal d1">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3 data-en="Play your way" data-zh="你的节奏">Play your way</h3>
-        <p data-en="Easy or challenging grids, three piece shapes. Move each piece without pressure — your pace, your rules." data-zh="从简单到挑战的格子，三种拼图形状。不用赶时间，一片一片慢慢放——你的节奏，你说了算。">Easy or challenging grids, three piece shapes. Move each piece without pressure — your pace, your rules.</p>
+        <h3 data-i18n="c2.h">Play your way</h3>
+        <p data-i18n="c2.p">Easy or challenging grids, three piece shapes. Move each piece without pressure — your pace, your rules.</p>
       </div>
       <div class="card reveal d2">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M21 4l-9 9-3-3"/></svg></div>
-        <h3 data-en="Calm by design" data-zh="纯净体验">Calm by design</h3>
-        <p data-en="No ads. No network needed. No rush. Open it anytime, anywhere, and just breathe for a minute." data-zh="没有广告，无需联网，不必着急。随时随地打开，给自己一分钟，好好呼吸。">No ads. No network needed. No rush. Open it anytime, anywhere, and just breathe for a minute.</p>
+        <h3 data-i18n="c3.h">Calm by design</h3>
+        <p data-i18n="c3.p">No ads. No network needed. No rush. Open it anytime, anywhere, and just breathe for a minute.</p>
       </div>
       <div class="card reveal d3">
         <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-9 8"/></svg></div>
-        <h3 data-en="Your own moments" data-zh="你自己的记忆">Your own moments</h3>
-        <p data-en="Bring in your own photos. A child's drawing, a favorite meal, a travel snapshot — turn it into a puzzle to return to." data-zh="导入你自己的照片。孩子的一幅画、喜欢的一餐、旅途的一张照片——都能变成一张值得回来拼的拼图。">Bring in your own photos. A child's drawing, a favorite meal, a travel snapshot — turn it into a puzzle to return to.</p>
+        <h3 data-i18n="c4.h">Your own moments</h3>
+        <p data-i18n="c4.p">Bring in your own photos. A child's drawing, a favorite meal, a travel snapshot — turn it into a puzzle to return to.</p>
       </div>
     </div>
   </div>
@@ -263,8 +107,8 @@
 <!-- ============ 截图画廊 ============ -->
 <section class="gallery">
   <div class="wrap head">
-    <div class="eyebrow reveal"><span class="d"></span><span data-en="A look inside" data-zh="进去看看">A look inside</span></div>
-    <h2 class="reveal d1" data-en="Quiet to look at. Quiet to play." data-zh="看着安静，玩着也安静。">Quiet to look at. Quiet to play.</h2>
+    <div class="eyebrow reveal"><span class="d"></span><span data-i18n="gal.eyebrow">A look inside</span></div>
+    <h2 class="reveal d1" data-i18n="gal.h">Quiet to look at. Quiet to play.</h2>
   </div>
   <div class="rail reveal d1">
     <div class="spacer"></div>
@@ -282,9 +126,9 @@
 <section class="beauty">
   <div class="bg"></div><div class="veil"></div>
   <div class="wrap">
-    <div class="eyebrow reveal"><span class="d"></span><span data-en="The little beauty of it" data-zh="它细微的美">The little beauty of it</span></div>
-    <h2 class="reveal d1" data-en="Every picture is a small study in texture, color, and calm." data-zh="每一张图，都是一次关于质地、色彩与安宁的小小凝视。">Every picture is a small study in texture, color, and calm.</h2>
-    <p class="reveal d2" data-en="Piece it together, one quiet minute at a time — and keep the finished moment, with a title and a note, if you like." data-zh="一片一片，拼回属于你的安静几分钟——若你愿意，还能为完成的那一刻，留下一个名字和一句话。">Piece it together, one quiet minute at a time — and keep the finished moment, with a title and a note, if you like.</p>
+    <div class="eyebrow reveal"><span class="d"></span><span data-i18n="bt.eyebrow">The little beauty of it</span></div>
+    <h2 class="reveal d1" data-i18n="bt.h">Every picture is a small study in texture, color, and calm.</h2>
+    <p class="reveal d2" data-i18n="bt.p">Piece it together, one quiet minute at a time — and keep the finished moment, with a title and a note, if you like.</p>
   </div>
 </section>
 
@@ -293,12 +137,12 @@
   <div class="wrap">
     <div class="box reveal">
       <img class="ic" src="assets/img/icon.png" alt="Piece Moment">
-      <h2 data-en="Take a little <em>Piece Moment.</em>" data-zh="给自己，留一个<em>片刻。</em>">Take a little <em>Piece Moment.</em></h2>
-      <p data-en="One picture at a time. Free to start on the App Store." data-zh="一次拼一张图。在 App Store 免费开始。">One picture at a time. Free to start on the App Store.</p>
+      <h2 data-i18n="dl.h">Take a little <em>Piece Moment.</em></h2>
+      <p data-i18n="dl.p">One picture at a time. Free to start on the App Store.</p>
       <div class="cta-row">
         <a class="appstore" href="https://apps.apple.com/app/id6770564963" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.23 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.28-1.27 3.13-2.53.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.75-4.14zM14.54 4.4c.71-.86 1.19-2.06 1.06-3.25-1.02.04-2.27.68-3 1.54-.65.76-1.23 1.98-1.07 3.15 1.14.09 2.3-.58 3.01-1.44z"/></svg>
-          <span class="t"><small data-en="Download on the" data-zh="前往">Download on the</small><span>App Store</span></span>
+          <span class="t"><small data-i18n="nav.dl">Download on the</small><span>App Store</span></span>
         </a>
       </div>
     </div>
@@ -310,49 +154,14 @@
   <div class="wrap row">
     <a class="brand" href="#top"><img src="assets/img/icon.png" alt="">Piece Moment</a>
     <div class="links">
-      <a href="https://gerryke.github.io/piece-moment-support/" target="_blank" rel="noopener" data-en="Support" data-zh="支持">Support</a>
-      <a href="#" data-en="Privacy" data-zh="隐私政策">Privacy</a>
-      <a href="mailto:keyipeng@gmail.com" data-en="Contact" data-zh="联系我们">Contact</a>
+      <a href="https://gerryke.github.io/piece-moment-support/" target="_blank" rel="noopener" data-i18n="f.support">Support</a>
+      <a href="privacy.html" data-i18n="f.privacy">Privacy</a>
+      <a href="mailto:keyipeng@gmail.com" data-i18n="f.contact">Contact</a>
     </div>
-    <span data-en="© 2026 Piece Moment. One picture. One moment." data-zh="© 2026 Piece Moment · 片刻. 一次，拼一张图。">© 2026 Piece Moment. One picture. One moment.</span>
+    <span data-i18n="f.copy">© 2026 Piece Moment. One picture. One moment.</span>
   </div>
 </footer>
 
-<script>
-(function(){
-  // ---- 语言切换 ----
-  var saved = localStorage.getItem('pm_lang') || 'en';
-  function apply(lang){
-    document.documentElement.lang = (lang==='zh'?'zh':'en');
-    document.querySelectorAll('[data-en]').forEach(function(el){
-      var v = el.getAttribute('data-'+lang);
-      if(v!=null) el.innerHTML = v;
-    });
-    document.querySelectorAll('#lang button').forEach(function(b){
-      b.classList.toggle('on', b.dataset.lang===lang);
-    });
-    localStorage.setItem('pm_lang', lang);
-  }
-  document.querySelectorAll('#lang button').forEach(function(b){
-    b.addEventListener('click', function(){ apply(b.dataset.lang); });
-  });
-  apply(saved);
-
-  // ---- 导航吸顶 ----
-  var nav = document.getElementById('nav');
-  function onScroll(){ nav.classList.toggle('solid', window.scrollY>30); }
-  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-
-  // ---- 滚动揭示 ----
-  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if(reduce){ document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in');}); }
-  else{
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-    },{threshold:.14});
-    document.querySelectorAll('.reveal').forEach(function(e){ io.observe(e); });
-  }
-})();
-</script>
+<script src="assets/app.js"></script>
 </body>
 </html>

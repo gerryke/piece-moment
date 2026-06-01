@@ -1,0 +1,174 @@
+:root{
+  --paper:#FAFAF6; --mist:#E9F0F5; --mist-deep:#D7E2EC;
+  --sage:#A7BCAB; --sage-soft:#D4E0D6;
+  --ink:#2C3138; --ink-soft:#565d66; --muted:#8b9099;
+  --line:rgba(44,49,56,.10);
+  --shadow:0 30px 60px -20px rgba(60,72,88,.28);
+  --shadow-sm:0 12px 30px -12px rgba(60,72,88,.30);
+  --serif:"Fraunces","Noto Serif SC",Georgia,serif;
+  --sans:"Hanken Grotesk","Noto Sans JP","Noto Serif SC",-apple-system,sans-serif;
+  --maxw:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+section{position:relative}
+
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;line-height:1.05}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sage);font-weight:600}
+.eyebrow .d{width:6px;height:6px;border-radius:50%;background:var(--sage)}
+
+/* App Store 按钮 */
+.appstore{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:#fff;
+  padding:13px 24px 13px 20px;border-radius:14px;box-shadow:var(--shadow-sm);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.appstore:hover{transform:translateY(-3px);box-shadow:0 22px 40px -16px rgba(60,72,88,.45)}
+.appstore svg{width:24px;height:24px;flex:none}
+.appstore .t small{display:block;font-size:10px;letter-spacing:.04em;opacity:.72;font-weight:400;line-height:1.1}
+.appstore .t span{display:block;font-size:17px;line-height:1.15;font-weight:600}
+.appstore.sm{padding:9px 16px 9px 14px}.appstore.sm svg{width:18px;height:18px}
+.appstore.sm .t small{font-size:8px}.appstore.sm .t span{font-size:13px}
+
+/* ---------- 导航 ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,box-shadow .4s,padding .4s;padding:20px 0}
+.nav.solid{background:rgba(250,250,246,.82);backdrop-filter:blur(14px) saturate(1.2);
+  box-shadow:0 1px 0 var(--line);padding:13px 0}
+.nav .row{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink)}
+.brand img{width:34px;height:34px;border-radius:9px;box-shadow:var(--shadow-sm)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:100px;overflow:hidden;font-size:13px;font-weight:500}
+.lang button{background:none;border:none;padding:6px 12px;cursor:pointer;color:var(--muted);font-family:var(--sans);transition:.25s}
+.lang button.on{background:var(--ink);color:#fff}
+
+/* ---------- Hero ---------- */
+.hero{padding:150px 0 90px;background:radial-gradient(120% 90% at 80% -10%, #fff 0%, var(--mist) 48%, var(--paper) 100%);overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.hero h1{font-size:clamp(42px,5.8vw,72px)}
+.hero h1 em{font-style:italic;color:var(--sage)}
+.hero .lead{margin:26px 0 34px;font-size:17px;line-height:1.72;color:var(--ink-soft);max-width:430px;font-weight:300}
+.cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.meta{font-size:13px;color:var(--muted)}.meta .dot{margin:0 8px;opacity:.5}
+.hero .eyebrow{margin-bottom:22px}
+.stage{position:relative;display:flex;justify-content:center}
+.phone{position:relative;width:286px;border-radius:44px;background:#1d2228;padding:11px;
+  box-shadow:0 55px 100px -34px rgba(40,52,66,.55);transform:rotate(3deg)}
+.phone img{border-radius:34px;width:100%}
+.phone .notch{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:112px;height:27px;
+  background:#1d2228;border-radius:0 0 17px 17px;z-index:2}
+.fp{width:76px;height:76px;border-radius:24%;background:var(--sage-soft);position:absolute;
+  box-shadow:inset 0 2px 8px rgba(255,255,255,.7),0 16px 30px -14px rgba(96,116,98,.55);opacity:.92}
+.fp::after{content:"";position:absolute;width:36%;height:36%;border-radius:50%;background:inherit;box-shadow:inherit}
+.fp1{left:-30px;top:16%;transform:rotate(-14deg);animation:float 8s ease-in-out infinite;--r:-14deg}
+.fp1::after{right:-15%;top:32%}
+.fp2{right:-20px;bottom:13%;width:58px;height:58px;transform:rotate(12deg);animation:float 10s ease-in-out infinite .5s;--r:12deg}
+.fp2::after{bottom:-15%;left:30%}
+
+/* ---------- 主张 ---------- */
+.manifesto{padding:118px 0;text-align:center}
+.manifesto h2{font-size:clamp(28px,4.2vw,46px);max-width:880px;margin:0 auto;line-height:1.22;color:var(--ink)}
+.manifesto h2 .soft{color:var(--muted)}
+.manifesto .rule{width:40px;height:1px;background:var(--line);margin:38px auto 0}
+
+/* ---------- 特性 ---------- */
+.features{padding:40px 0 110px}
+.features .head{text-align:center;margin-bottom:58px}
+.features .head h2{font-size:clamp(30px,4vw,46px);margin-top:14px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 26px;
+  box-shadow:0 18px 40px -28px rgba(60,72,88,.4);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 55px -28px rgba(60,72,88,.5)}
+.card .ic{width:46px;height:46px;border-radius:13px;background:var(--mist);display:grid;place-items:center;margin-bottom:20px}
+.card .ic svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{font-size:14.5px;line-height:1.62;color:var(--ink-soft);font-weight:300}
+
+/* ---------- 截图画廊 ---------- */
+.gallery{padding:96px 0;background:linear-gradient(180deg,var(--paper),var(--mist) 60%,var(--paper))}
+.gallery .head{text-align:center;margin-bottom:48px}
+.gallery .head h2{font-size:clamp(30px,4vw,46px);margin-top:14px}
+.rail{display:flex;gap:24px;overflow-x:auto;padding:14px 28px 30px;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail .shot{flex:none;width:236px;scroll-snap-align:center;border-radius:30px;padding:9px;background:#fff;
+  border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .4s}
+.rail .shot:hover{transform:translateY(-8px)}
+.rail .shot img{border-radius:23px}
+.rail .spacer{flex:none;width:1px}
+
+/* ---------- 内容之美 ---------- */
+.beauty{position:relative;min-height:74vh;display:flex;align-items:center;overflow:hidden}
+.beauty .bg{position:absolute;inset:0;background:url('img/beauty-1.jpg') center/cover no-repeat;transform:scale(1.05)}
+.beauty .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,28,24,.62) 0%,rgba(20,28,24,.30) 50%,rgba(20,28,24,.12) 100%)}
+.beauty .wrap{position:relative;z-index:3}
+.beauty .eyebrow{color:#cfe0d2}
+.beauty .eyebrow .d{background:#cfe0d2}
+.beauty h2{color:#fff;font-size:clamp(28px,4vw,48px);max-width:680px;margin:18px 0 0;line-height:1.18}
+.beauty p{color:rgba(255,255,255,.82);max-width:480px;margin-top:22px;font-size:16px;line-height:1.7;font-weight:300}
+
+/* ---------- 下载 CTA ---------- */
+.download{padding:120px 0}
+.download .box{background:radial-gradient(120% 130% at 50% 0%, #fff, var(--mist) 70%, var(--mist-deep));
+  border:1px solid var(--line);border-radius:34px;padding:74px 40px;text-align:center;box-shadow:var(--shadow)}
+.download img.ic{width:84px;height:84px;border-radius:21px;margin:0 auto 26px;box-shadow:var(--shadow-sm)}
+.download h2{font-size:clamp(32px,4.6vw,54px);margin-bottom:14px}
+.download h2 em{font-style:italic;color:var(--sage)}
+.download p{color:var(--ink-soft);margin-bottom:32px;font-weight:300}
+.download .cta-row{justify-content:center}
+
+/* ---------- 页脚 ---------- */
+footer{padding:46px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+footer .row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+footer .links{display:flex;gap:24px}
+footer a:hover{color:var(--ink)}
+footer .brand{font-size:17px;gap:9px;color:var(--ink-soft)}
+footer .brand img{width:26px;height:26px;border-radius:7px}
+
+/* ---------- 隐私政策页 ---------- */
+.legal-hero{background:radial-gradient(110% 80% at 80% -20%, #fff 0%, var(--mist) 55%, var(--paper) 100%)}
+.legal{max-width:760px;margin:0 auto;padding:138px 0 110px}
+.legal .back{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--muted);margin-bottom:30px;transition:.25s}
+.legal .back:hover{color:var(--ink)}
+.legal .back svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.legal h1{font-size:clamp(34px,5.5vw,54px);margin-bottom:10px}
+.legal .updated{color:var(--muted);font-size:14px;margin-bottom:34px}
+.legal .lead{font-size:18px;line-height:1.72;color:var(--ink);font-weight:300;
+  padding:24px 26px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 40px -30px rgba(60,72,88,.4);margin-bottom:46px}
+.legal .block{margin-bottom:34px}
+.legal .block h2{font-size:22px;margin-bottom:11px;color:var(--ink)}
+.legal .block p{font-size:15.5px;line-height:1.78;color:var(--ink-soft);font-weight:300}
+.legal .block a{color:var(--ink);border-bottom:1px solid var(--sage)}
+.legal .block a:hover{color:var(--sage)}
+
+/* ---------- 动效 ---------- */
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-16px) rotate(var(--r,0deg))}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.phone{transform:none}}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){
+  .hero{padding:128px 0 70px}
+  .hero .grid{grid-template-columns:1fr;gap:50px;text-align:center}
+  .hero .lead{margin-left:auto;margin-right:auto}
+  .cta-row{justify-content:center}
+  .hero .eyebrow{justify-content:center}
+  .phone{transform:none;width:250px}
+  .manifesto{padding:84px 0}.features{padding:20px 0 80px}
+  .beauty{min-height:62vh}
+  .legal{padding:118px 0 80px}
+}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr}
+  .brand{font-size:19px}.brand img{width:30px;height:30px}
+  .nav-right{gap:10px}
+  .lang button{padding:6px 9px}
+  .download .box{padding:54px 22px;border-radius:26px}
+  .wrap{padding:0 22px}
+}
