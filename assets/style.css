@@ -67,6 +67,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;line-hei
 .fp1::after{right:-15%;top:32%}
 .fp2{right:-20px;bottom:13%;width:58px;height:58px;transform:rotate(12deg);animation:float 10s ease-in-out infinite .5s;--r:12deg}
 .fp2::after{bottom:-15%;left:30%}
+/* 双机：后冷前暖错落 */
+.stage.duo{gap:0}
+.duo .phone{width:212px}
+.duo .phone.back{transform:rotate(-5deg) translateY(-16px);margin-right:-44px;z-index:1}
+.duo .phone.front{transform:rotate(5deg) translateY(18px);z-index:2}
 
 /* ---------- 主张 ---------- */
 .manifesto{padding:118px 0;text-align:center}
@@ -174,6 +179,9 @@ footer .brand img{width:26px;height:26px;border-radius:7px}
   .cta-row{justify-content:center}
   .hero .eyebrow{justify-content:center}
   .phone{transform:none;width:250px}
+  .duo .phone{width:150px}
+  .duo .phone.back{transform:rotate(-5deg) translateY(-12px);margin-right:-30px}
+  .duo .phone.front{transform:rotate(5deg) translateY(14px)}
   .manifesto{padding:84px 0}.features{padding:20px 0 80px}
   .beauty{min-height:62vh}
   .legal{padding:118px 0 80px}
