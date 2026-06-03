@@ -19,6 +19,7 @@ privacy.html            # 隐私政策页（同风格）
 assets/style.css        # 共享样式
 assets/app.js           # 共享逻辑：i18n 字典 + 导航吸顶 + 滚动揭示
 assets/img/             # 图标、截图、主视觉（已压到网页尺寸）
+marketing-assets/       # App Store 上架图、视频制作素材、官网图片源素材
 concepts/               # 主视觉方向探索稿（A/B/C 对比，内部参考）
 docs/superpowers/specs/ # 设计 spec
 ```
@@ -32,7 +33,29 @@ docs/superpowers/specs/ # 设计 spec
 
 ## 文案来源
 
-四语文案语气对齐 App Store 上架文案（见 jigsaw 源码仓库 `screenshots/app-store/app-store-listing-copy.md`）。
+四语文案语气对齐 App Store 上架文案（见本仓库 `marketing-assets/app-store/app-store-listing-copy.md`）。
+
+## 上架与宣传素材
+
+`marketing-assets/` 是 Piece Moment 后续营销素材的主目录：
+
+- `marketing-assets/app-store/`：App Store 上架叙事图、横版图、上架文案，以及当前官网截图的高分辨率源图。
+- `marketing-assets/app-store/upload-ready/`：当前 App Store 叙事图的 6.9 寸 iPhone 原始上传图（1320×2868）。
+- `marketing-assets/upload-ready/`：6.9 寸 iPhone 原始上传图（1320×2868），不放旧的加工导出版。
+- `marketing-assets/ipad-upload-ready/`：13 寸 iPad 原始上传图（2064×2752），不放旧的加工导出版。
+- `marketing-assets/legacy-1284x2778/`：旧的 1284×2778 加工导出版，仅作归档，不作为当前上传源。
+- `marketing-assets/legacy-ipad-2048x2732/`：旧的 2048×2732 iPad 图，仅作归档，不作为当前上传源。
+- `marketing-assets/current-used/`：当前线上官网和当前 App Store 素材基线，方便新版重做时对照。
+- `marketing-assets/next-version-prep/`：新版上架图与宣传视频筹备区，`sources/` 放候选原图，`drafts/` 放英文营销展示图草稿。
+
+官网实际加载的图片仍放在 `assets/img/`，并压到网页尺寸；从 `marketing-assets/` 复用文件生成网页图时，记得同步更新引用版本号（例如 `?v=5`）。
+
+当前 App Store 与营销素材尺寸固定为：
+
+- iPhone：6.9 寸竖图，1320×2868。
+- iPad：13 寸竖图，2064×2752。
+- App preview / 宣传视频：按同一设备族输出，iPhone 用 6.9 寸竖版比例，iPad 用 13 寸竖版比例。
+- 新版营销展示图：统一英文，字体风格跟官网一致（Fraunces 标题 + Hanken Grotesk 正文），屏幕图裁掉状态栏等多余系统信息。
 
 ## 部署
 
