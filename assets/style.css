@@ -99,6 +99,10 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;line-hei
 .rail .shot:hover{transform:translateY(-8px)}
 .rail .shot img{border-radius:23px}
 .rail .spacer{flex:none;width:1px}
+.gallery .ipad-head{margin-top:64px;margin-bottom:34px}
+.ipad-rail{padding-top:6px}
+.ipad-rail .ipad-shot{width:320px;border-radius:28px}
+.ipad-rail .ipad-shot img{border-radius:20px}
 
 /* ---------- 内容之美 ---------- */
 .beauty{position:relative;min-height:74vh;display:flex;align-items:center;overflow:hidden}

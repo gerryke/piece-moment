@@ -26,6 +26,8 @@
 
     "gal.eyebrow":   { en:"A look inside", zh:"进去看看", zht:"進去看看", ja:"中をのぞいてみる" },
     "gal.h":         { en:"Quiet to look at. Quiet to play.", zh:"看着安静，玩着也安静。", zht:"看著安靜，玩著也安靜。", ja:"見ても、遊んでも、静か。" },
+    "ipad.eyebrow":  { en:"On iPad", zh:"在 iPad 上", zht:"在 iPad 上", ja:"iPad でも" },
+    "ipad.h":        { en:"More room for quiet play.", zh:"更大的画面，也更安静地拼。", zht:"更大的畫面，也更安靜地拼。", ja:"広い画面で、静かに遊ぶ。" },
 
     "bt.eyebrow":    { en:"The little beauty of it", zh:"它细微的美", zht:"它細微的美", ja:"その小さな美しさ" },
     "bt.h":          { en:"Every picture is a small study in texture, color, and calm.", zh:"每一张图，都是一次关于质地、色彩与安宁的小小凝视。", zht:"每一張圖，都是一次關於質地、色彩與安寧的小小凝視。", ja:"どの一枚も、質感と色と静けさをめぐる小さな観察。" },
