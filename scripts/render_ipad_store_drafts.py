@@ -74,6 +74,38 @@ ITEMS = [
         "tilt": 0.45,
         "crop_top": 126,
     },
+    {
+        "file": "07-personal-photos.png",
+        "source": "marketing-assets/ipad-upload-ready/2544-2064x2752.png",
+        "title": ["Personal", "photos."],
+        "subtitle": "Turn your own pictures into puzzles.",
+        "tilt": -0.45,
+        "crop_top": 126,
+    },
+    {
+        "file": "08-name-the-moment.png",
+        "source": "marketing-assets/ipad-upload-ready/2545-2064x2752.png",
+        "title": ["Name the", "moment."],
+        "subtitle": "Keep a small note when you finish.",
+        "tilt": 0.45,
+        "crop_top": 126,
+    },
+    {
+        "file": "09-wide-calm-play.png",
+        "source": "marketing-assets/ipad-upload-ready/微信图片_20260529224642_889_17-2064x2752.png",
+        "title": ["Wide,", "calm play."],
+        "subtitle": "More space for every piece.",
+        "tilt": -0.45,
+        "crop_top": 126,
+    },
+    {
+        "file": "10-finish-and-continue.png",
+        "source": "marketing-assets/ipad-upload-ready/微信图片_20260529224644_891_17-2064x2752.png",
+        "title": ["Finish,", "then continue."],
+        "subtitle": "A gentle rhythm for quiet play.",
+        "tilt": 0.45,
+        "crop_top": 126,
+    },
 ]
 
 
