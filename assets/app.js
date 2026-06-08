@@ -4,7 +4,7 @@
     "nav.dl":        { en:"Download on the", zh:"前往", zht:"前往", ja:"ダウンロード" },
 
     "hero.eyebrow":  { en:"Cozy Jigsaw", zh:"片刻：休闲拼图", zht:"片刻：休閒拼圖", ja:"片刻：癒しのジグソーパズル" },
-    "hero.h1":       { en:"Antistress puzzles<br><em>for quiet breaks.</em>", zh:"碎片时间里的<br><em>放松解压。</em>", zht:"零碎時間裡的<br><em>放鬆紓壓。</em>", ja:"すきま時間に<br><em>ストレス解消。</em>" },
+    "hero.h1":       { en:"Antistress puzzles<br><em>for short breaks.</em>", zh:"碎片时间里的<br><em>放松解压。</em>", zht:"零碎時間裡的<br><em>放鬆紓壓。</em>", ja:"すきま時間に<br><em>ストレス解消。</em>" },
     "hero.lead":     { en:"Open it for a short break, a long wait, travel, or bedtime. Browse gentle picture collections, pick a difficulty, and finish at your own pace — no account, no ads, no network needed.", zh:"适合碎片时间、旅途、等待、等餐或睡前打开。浏览柔和的图片收藏，挑选拼图难度，按照自己的节奏慢慢完成——不需登录账号，没有广告，也不需要联网。", zht:"適合零碎時間、旅途、等待、等餐或睡前打開。瀏覽柔和的圖片收藏，挑選拼圖難度，按照自己的節奏慢慢完成——不需登入帳號，沒有廣告，也不需網路連線。", ja:"すきま時間、旅先、待ち時間、食事待ち、寝る前に。やさしい画像コレクションから選び、難易度を決めて、自分のペースで仕上げる——アカウント不要、広告なし、ネット接続も不要。" },
     "hero.m1":       { en:"No ads", zh:"无广告", zht:"無廣告", ja:"広告なし" },
     "hero.m2":       { en:"Offline", zh:"可离线", zht:"可離線", ja:"オフライン" },
@@ -25,13 +25,13 @@
     "c4.p":          { en:"Bring in your own photos. A child's drawing, a favorite meal, a travel snapshot — turn it into a puzzle to return to.", zh:"导入你自己的照片。孩子的一幅画、喜欢的一餐、旅途的一张照片——都能变成一张值得回来拼的拼图。", zht:"匯入你自己的照片。孩子的一幅畫、喜歡的一餐、旅途的一張照片——都能變成一張值得回來拼的拼圖。", ja:"自分の写真を取り込んで。子どもの絵、お気に入りの食事、旅先の一枚を、また戻ってきたくなるパズルに。" },
 
     "gal.eyebrow":   { en:"A look inside", zh:"进去看看", zht:"進去看看", ja:"中をのぞいてみる" },
-    "gal.h":         { en:"Quiet to look at. Quiet to play.", zh:"看着安静，玩着也安静。", zht:"看著安靜，玩著也安靜。", ja:"見ても、遊んでも、静か。" },
+    "gal.h":         { en:"Calm to look at. Easy to play.", zh:"看着平静，玩着轻松。", zht:"看著平靜，玩著輕鬆。", ja:"見て落ち着き、気軽に遊べる。" },
     "ipad.eyebrow":  { en:"On iPad", zh:"在 iPad 上", zht:"在 iPad 上", ja:"iPad でも" },
-    "ipad.h":        { en:"More room for quiet play.", zh:"更大的画面，也更安静地拼。", zht:"更大的畫面，也更安靜地拼。", ja:"広い画面で、静かに遊ぶ。" },
+    "ipad.h":        { en:"More room to relax and focus.", zh:"更大的画面，也更容易放松专注。", zht:"更大的畫面，也更容易放鬆專注。", ja:"広い画面で、リラックスして集中。" },
 
     "bt.eyebrow":    { en:"The little beauty of it", zh:"它细微的美", zht:"它細微的美", ja:"その小さな美しさ" },
     "bt.h":          { en:"Every picture is a small study in texture, color, and calm.", zh:"每一张图，都是一次关于质地、色彩与安宁的小小凝视。", zht:"每一張圖，都是一次關於質地、色彩與安寧的小小凝視。", ja:"どの一枚も、質感と色と静けさをめぐる小さな観察。" },
-    "bt.p":          { en:"Piece it together, one quiet minute at a time — and keep the finished moment, with a title and a note, if you like.", zh:"一片一片，拼回属于你的安静几分钟——若你愿意，还能为完成的那一刻，留下一个名字和一句话。", zht:"一片一片，拼回屬於你的安靜幾分鐘——若你願意，還能為完成的那一刻，留下一個名字和一句話。", ja:"一片ずつ、静かな数分を組み立てて。よければ、完成したその瞬間に、タイトルとひとことを残せます。" },
+    "bt.p":          { en:"Piece it together, one calm minute at a time — and keep the finished moment, with a title and a note, if you like.", zh:"一片一片，拼回属于你的平静几分钟——若你愿意，还能为完成的那一刻，留下一个名字和一句话。", zht:"一片一片，拼回屬於你的平靜幾分鐘——若你願意，還能為完成的那一刻，留下一個名字和一句話。", ja:"一片ずつ、落ち着いた数分を組み立てて。よければ、完成したその瞬間に、タイトルとひとことを残せます。" },
 
     "pf.eyebrow":    { en:"Ranked on the App Store", zh:"曾登上 App Store 付费榜", zht:"曾登上 App Store 付費榜", ja:"App Store 有料ランキング実績" },
     "pf.h":          { en:"Alongside App Store classics on the paid charts.", zh:"在付费榜上，与多款经典游戏同列。", zht:"在付費榜上，與多款經典遊戲同列。", ja:"有料ランキングで、名作ゲームと並びました。" },

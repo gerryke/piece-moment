@@ -22,7 +22,7 @@ Choose a picture, relax for a moment, and enjoy the small satisfaction of puttin
 
 ### Description
 
-Piece Moment is a relaxing jigsaw puzzle app for the small quiet spaces in your day.
+Piece Moment is a cozy jigsaw puzzle app for short breaks, travel, waiting, and bedtime.
 
 Browse gentle image collections, choose a picture that fits your mood, and turn it into a puzzle you can enjoy at your own pace. Pick an easy or challenging grid, move each piece without pressure, and enjoy the calm reward of watching the image come back together.
 
