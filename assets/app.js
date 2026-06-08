@@ -34,7 +34,7 @@
     "bt.p":          { en:"Piece it together, one quiet minute at a time — and keep the finished moment, with a title and a note, if you like.", zh:"一片一片，拼回属于你的安静几分钟——若你愿意，还能为完成的那一刻，留下一个名字和一句话。", zht:"一片一片，拼回屬於你的安靜幾分鐘——若你願意，還能為完成的那一刻，留下一個名字和一句話。", ja:"一片ずつ、静かな数分を組み立てて。よければ、完成したその瞬間に、タイトルとひとことを残せます。" },
 
     "pf.eyebrow":    { en:"Ranked on the App Store", zh:"曾登上 App Store 付费榜", zht:"曾登上 App Store 付費榜", ja:"App Store 有料ランキング実績" },
-    "pf.h":          { en:"A quiet little app that found its place among the classics.", zh:"一个安静的小 App，曾跻身经典之列。", zht:"一個安靜的小 App，曾躋身經典之列。", ja:"静かな小さなアプリが、名作たちと肩を並べた瞬間。" },
+    "pf.h":          { en:"Alongside App Store classics on the paid charts.", zh:"在付费榜上，与多款经典游戏同列。", zht:"在付費榜上，與多款經典遊戲同列。", ja:"有料ランキングで、名作ゲームと並びました。" },
     "pf.s1l":        { en:"Paid Family Games", zh:"付费家庭游戏榜", zht:"付費家庭遊戲榜", ja:"有料ファミリー" },
     "pf.s2l":        { en:"Top Paid iPad Apps", zh:"付费 iPad App 榜", zht:"付費 iPad App 榜", ja:"有料 iPad App" },
     "pf.s3n":        { en:"Top 50", zh:"前 50", zht:"前 50", ja:"Top 50" },
