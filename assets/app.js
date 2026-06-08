@@ -3,17 +3,17 @@
   var I18N = {
     "nav.dl":        { en:"Download on the", zh:"前往", zht:"前往", ja:"ダウンロード" },
 
-    "hero.eyebrow":  { en:"Relaxing Jigsaw Puzzles", zh:"轻松拼一张图", zht:"放鬆療癒的拼圖", ja:"静かに楽しむ癒しのパズル" },
-    "hero.h1":       { en:"A quiet, relaxing<br><em>jigsaw&nbsp;puzzle.</em>", zh:"安静、放松的<br><em>拼图游戏。</em>", zht:"安靜、放鬆的<br><em>拼圖遊戲。</em>", ja:"静かで心ほぐれる<br><em>ジグソーパズル。</em>" },
-    "hero.lead":     { en:"Open it before bed, on a break, or whenever you want to slow down. Browse the built-in collections, pick a difficulty, and finish at your own pace — no account, no ads, no network needed.", zh:"适合在睡前、休息时，或想让自己慢下来的时候打开。浏览内建的图片收藏，挑选拼图难度，按照自己的节奏慢慢完成——不需登录账号，没有广告，也不需要联网。", zht:"適合在睡前、休息時，或想讓自己慢下來的時候打開。瀏覽內建的圖片收藏，挑選拼圖難度，按照自己的節奏慢慢完成——不需登入帳號，沒有廣告，也不需網路連線。", ja:"寝る前や休憩中、少し落ち着きたいときに。内蔵の画像コレクションから選び、難易度を決めて、自分のペースで仕上げる——アカウント不要、広告なし、ネット接続も不要。" },
+    "hero.eyebrow":  { en:"Cozy Jigsaw", zh:"片刻：休闲拼图", zht:"片刻：休閒拼圖", ja:"片刻：癒しのジグソーパズル" },
+    "hero.h1":       { en:"Antistress puzzles<br><em>for quiet breaks.</em>", zh:"碎片时间里的<br><em>放松解压。</em>", zht:"零碎時間裡的<br><em>放鬆紓壓。</em>", ja:"すきま時間に<br><em>ストレス解消。</em>" },
+    "hero.lead":     { en:"Open it for a short break, a long wait, travel, or bedtime. Browse gentle picture collections, pick a difficulty, and finish at your own pace — no account, no ads, no network needed.", zh:"适合碎片时间、旅途、等待、等餐或睡前打开。浏览柔和的图片收藏，挑选拼图难度，按照自己的节奏慢慢完成——不需登录账号，没有广告，也不需要联网。", zht:"適合零碎時間、旅途、等待、等餐或睡前打開。瀏覽柔和的圖片收藏，挑選拼圖難度，按照自己的節奏慢慢完成——不需登入帳號，沒有廣告，也不需網路連線。", ja:"すきま時間、旅先、待ち時間、食事待ち、寝る前に。やさしい画像コレクションから選び、難易度を決めて、自分のペースで仕上げる——アカウント不要、広告なし、ネット接続も不要。" },
     "hero.m1":       { en:"No ads", zh:"无广告", zht:"無廣告", ja:"広告なし" },
     "hero.m2":       { en:"Offline", zh:"可离线", zht:"可離線", ja:"オフライン" },
     "hero.m3":       { en:"No account", zh:"无需账号", zht:"不需帳號", ja:"アカウント不要" },
 
-    "man.h":         { en:"A quiet puzzle for before bed, for breaks, for whenever you want to slow down. <span class='soft'>No scores to chase — just focus, calm, and a picture coming back together.</span>", zh:"一款适合睡前、休息，或想慢下来时打开的安静拼图。<span class='soft'>没有分数要追赶——只有专注、放松，和画面重新完整起来的过程。</span>", zht:"一款適合睡前、休息，或想慢下來時打開的安靜拼圖。<span class='soft'>沒有分數要追趕——只有專注、放鬆，和畫面重新完整起來的過程。</span>", ja:"寝る前にも、休憩にも、少し落ち着きたいときにも。<span class='soft'>競う点数はなく、あるのは集中と、安らぎと、絵が戻っていく時間だけ。</span>" },
+    "man.h":         { en:"A cozy jigsaw for travel, waiting, bedtime, and the small breaks in between. <span class='soft'>No scores to chase — just focus, calm, and a picture coming back together.</span>", zh:"一款适合旅途、等待、睡前和各种碎片时间的休闲拼图。<span class='soft'>没有分数要追赶——只有专注、平静，和画面重新完整起来的过程。</span>", zht:"一款適合旅途、等待、睡前和各種零碎時間的休閒拼圖。<span class='soft'>沒有分數要追趕——只有專注、平靜，和畫面重新完整起來的過程。</span>", ja:"旅先、待ち時間、寝る前、日々のすきま時間に開きたい癒しのジグソーパズル。<span class='soft'>競う点数はなく、あるのは集中と、静けさと、絵が戻っていく時間だけ。</span>" },
 
-    "feat.eyebrow":  { en:"Made to feel calm", zh:"为放松而设计", zht:"為放鬆而設計", ja:"心が落ち着く設計" },
-    "feat.h":        { en:"Everything here slows you down", zh:"这里的一切，都让你慢下来", zht:"這裡的一切，都讓你慢下來", ja:"ここにあるすべてが、あなたをゆっくりに" },
+    "feat.eyebrow":  { en:"Made for calm breaks", zh:"为碎片时间而设计", zht:"為零碎時間而設計", ja:"すきま時間のために" },
+    "feat.h":        { en:"Everything here helps you unwind", zh:"这里的一切，都让你轻松下来", zht:"這裡的一切，都讓你輕鬆下來", ja:"少しずつ、気持ちがほどけていく" },
 
     "c1.h":          { en:"Calm collections", zh:"柔和图库", zht:"柔和圖庫", ja:"やさしい画像コレクション" },
     "c1.p":          { en:"Gentle, themed picture collections — seasons, nature, food, and more. There's always one to match your mood.", zh:"柔和的主题图库——四季、自然、美食……总有一张，合你此刻的心情。", zht:"柔和的主題圖庫——四季、自然、美食……總有一張，合你此刻的心情。", ja:"四季・自然・食べ物など、やさしいテーマの画像コレクション。今の気分に合う一枚がきっと見つかります。" },
@@ -42,13 +42,13 @@
     "pf.note":       { en:"Ranked alongside Monument Valley, Hitman GO, and Rusty Lake.", zh:"与《纪念碑谷》《Hitman GO》《Rusty Lake》等经典同列。", zht:"與《紀念碑谷》《Hitman GO》《Rusty Lake》等經典同列。", ja:"『Monument Valley』『Hitman GO』『Rusty Lake』など名作と並びました。" },
     "pf.cap":        { en:"Paid iPad Apps · App Store", zh:"付费 iPad App 排行 · App Store", zht:"付費 iPad App 排行 · App Store", ja:"有料 iPad App ランキング · App Store" },
 
-    "dl.h":          { en:"Take a little <em>Piece Moment.</em>", zh:"给自己，留一个<em>片刻。</em>", zht:"給自己，留一個<em>片刻。</em>", ja:"ほんの少し、<em>Piece&nbsp;Moment&nbsp;を。</em>" },
-    "dl.p":          { en:"Set aside a little time for yourself, and piece a picture back together.", zh:"把一小段时间留给自己，慢慢拼回眼前的画面。", zht:"把一小段時間留給自己，慢慢拼回眼前的畫面。", ja:"ほんの少しの時間を自分のために。目の前の絵を、ゆっくり戻していく。" },
+    "dl.h":          { en:"Take a cozy <em>Piece Moment.</em>", zh:"给自己，留一个<em>片刻。</em>", zht:"給自己，留一個<em>片刻。</em>", ja:"ほんの少し、<em>片刻</em>を。" },
+    "dl.p":          { en:"Use a short break to relax, focus, and piece a picture back together.", zh:"用一小段碎片时间，放松、专注，慢慢拼回眼前的画面。", zht:"用一小段零碎時間，放鬆、專注，慢慢拼回眼前的畫面。", ja:"すきま時間にリラックスして、目の前の絵をゆっくり戻していく。" },
 
     "f.support":     { en:"Support", zh:"支持", zht:"支援", ja:"サポート" },
     "f.privacy":     { en:"Privacy", zh:"隐私政策", zht:"隱私權政策", ja:"プライバシー" },
     "f.contact":     { en:"Contact", zh:"联系我们", zht:"聯絡我們", ja:"お問い合わせ" },
-    "f.copy":        { en:"© 2026 Piece Moment. One picture. One moment.", zh:"© 2026 Piece Moment · 片刻. 一次，拼一张图。", zht:"© 2026 Piece Moment · 片刻拼圖. 一次，拼一張圖。", ja:"© 2026 Piece Moment. 一度に一枚、ひとときを。" },
+    "f.copy":        { en:"© 2026 Piece Moment. Cozy jigsaw breaks.", zh:"© 2026 Piece Moment · 片刻. 碎片时间，放松解压。", zht:"© 2026 Piece Moment · 片刻. 零碎時間，放鬆紓壓。", ja:"© 2026 片刻. すきま時間にストレス解消。" },
 
     // ---- 隐私政策页 ----
     "pv.back":       { en:"Back to home", zh:"返回首页", zht:"返回首頁", ja:"ホームに戻る" },
