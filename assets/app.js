@@ -92,6 +92,9 @@
     document.querySelectorAll("#lang button").forEach(function (b) {
       b.classList.toggle("on", b.dataset.lang === lang);
     });
+    document.querySelectorAll("[data-localized-shot]").forEach(function (img) {
+      img.src = "assets/img/shots/v8/" + lang + "/" + img.dataset.localizedShot + ".jpg?v=1";
+    });
     localStorage.setItem("pm_lang", lang);
   }
   document.querySelectorAll("#lang button").forEach(function (b) {
