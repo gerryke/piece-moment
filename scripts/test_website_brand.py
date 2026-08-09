@@ -29,6 +29,18 @@ class WebsiteBrandTests(unittest.TestCase):
             with self.subTest(path=name):
                 self.assertIn("share-pieceful.jpg", (ROOT / name).read_text())
 
+    def test_updated_store_images_are_localized_and_cache_busted(self):
+        index = (ROOT / "index.html").read_text()
+        app_js = (ROOT / "assets" / "app.js").read_text()
+        self.assertIn('data-localized-ipad-shot="06"', index)
+        self.assertIn('assets/app.js?v=9', index)
+        self.assertIn("assets/img/shots/v113-ipad/", app_js)
+        self.assertIn('.jpg?v=2', app_js)
+        for locale in ("en", "zh", "zht", "ja"):
+            for number in ("01", "02", "03", "04"):
+                self.assertTrue((ROOT / f"assets/img/shots/v8/{locale}/{number}.jpg").is_file())
+            self.assertTrue((ROOT / f"assets/img/shots/v113-ipad/{locale}/06.jpg").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()
