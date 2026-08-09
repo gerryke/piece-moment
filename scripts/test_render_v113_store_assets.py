@@ -46,6 +46,38 @@ class V113StoreAssetTests(unittest.TestCase):
         self.assertEqual(len(set(self.renderer.IPHONE_OUTPUT_FILES)), 10)
         self.assertEqual(len(set(self.renderer.IPAD_OUTPUT_FILES)), 10)
 
+    def test_iphone_opening_sequence_places_share_page_sixth(self):
+        self.assertEqual(
+            self.renderer.IPHONE_OUTPUT_FILES[:6],
+            [
+                "01-every-piece-in-view.png",
+                "02-build-outside-the-board.png",
+                "03-move-pieces-together.png",
+                "04-for-every-mood.png",
+                "05-made-for-little-pauses.png",
+                "06-a-finish-worth-sharing.png",
+            ],
+        )
+
+    def test_all_localized_brand_marks_match_their_english_sources(self):
+        box = getattr(self.renderer, "BRAND_MARK_BOX", None)
+        self.assertIsNotNone(box, "renderer must define the locked brand-mark crop")
+        if box is None:
+            return
+        for locale in ("zh", "zht", "ja"):
+            for index, source in enumerate(self.renderer.LOCKED_IPHONE_SOURCES, start=1):
+                output = (
+                    self.output_root
+                    / self.renderer.iphone_output_dir(locale)
+                    / self.renderer.IPHONE_OUTPUT_FILES[index - 1]
+                )
+                with Image.open(source) as expected_image, Image.open(output) as actual_image:
+                    expected = expected_image.convert("RGB").crop(box)
+                    actual = actual_image.convert("RGB").crop(box)
+                self.assertEqual(actual.tobytes(), expected.tobytes(), (locale, index))
+                actual.close()
+                expected.close()
+
     def test_all_outputs_have_app_store_dimensions(self):
         iphone_dir = self.output_root / self.renderer.IPHONE_RELATIVE_OUTPUT
         ipad_dir = self.output_root / self.renderer.IPAD_RELATIVE_OUTPUT
@@ -69,10 +101,14 @@ class V113StoreAssetTests(unittest.TestCase):
                 sha256(iphone_dir / self.renderer.IPHONE_OUTPUT_FILES[index - 1]),
             )
 
-    def test_iphone_positions_five_through_ten_are_byte_identical(self):
+    def test_iphone_catalog_and_positions_seven_through_ten_are_byte_identical(self):
         iphone_dir = self.output_root / self.renderer.IPHONE_RELATIVE_OUTPUT
+        filenames = (
+            self.renderer.IPHONE_OUTPUT_FILES[3:5]
+            + self.renderer.IPHONE_OUTPUT_FILES[6:]
+        )
         for filename, source in zip(
-            self.renderer.IPHONE_OUTPUT_FILES[4:],
+            filenames,
             self.renderer.UNCHANGED_IPHONE_SOURCES,
         ):
             self.assertEqual(sha256(source), sha256(iphone_dir / filename))
@@ -134,11 +170,30 @@ class V113StoreAssetTests(unittest.TestCase):
         for locale in self.renderer.LOCALES:
             iphone_dir = self.output_root / self.renderer.iphone_output_dir(locale)
             ipad_dir = self.output_root / self.renderer.ipad_output_dir(locale)
-            for filename in self.renderer.IPHONE_OUTPUT_FILES[:4]:
+            for filename in self.renderer.IPHONE_OUTPUT_FILES[:6]:
                 with Image.open(iphone_dir / filename) as image:
                     self.assertEqual(image.size, (1320, 2868), (locale, filename))
             with Image.open(ipad_dir / "06-finish-continue.png") as image:
                 self.assertEqual(image.size, (2064, 2752), locale)
+
+    def test_app_store_connect_bundle_is_grouped_by_locale_and_device(self):
+        export = getattr(self.renderer, "export_app_store_connect_updates", None)
+        self.assertTrue(callable(export), "renderer must prepare an App Store Connect upload bundle")
+        if not callable(export):
+            return
+        export(self.output_root)
+        locale_dirs = {"en": "en-US", "zh": "zh-Hans", "zht": "zh-Hant", "ja": "ja"}
+        for locale_dir in locale_dirs.values():
+            root = self.output_root / "marketing-assets/app-store-connect/v1.1.3" / locale_dir
+            iphone_files = sorted((root / "iphone-6.9").glob("*.png"))
+            ipad_files = sorted((root / "ipad-13").glob("*.png"))
+            self.assertEqual([path.name[:2] for path in iphone_files], [f"{n:02d}" for n in range(1, 7)])
+            self.assertEqual([path.name for path in ipad_files], ["06-finish-continue.png"])
+            for path in iphone_files:
+                with Image.open(path) as image:
+                    self.assertEqual(image.size, (1320, 2868), path)
+            with Image.open(ipad_files[0]) as image:
+                self.assertEqual(image.size, (2064, 2752), ipad_files[0])
 
 class RendererHelperTests(unittest.TestCase):
     def test_chinese_page_one_uses_approved_piece_wording(self):

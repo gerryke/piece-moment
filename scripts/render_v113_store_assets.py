@@ -16,6 +16,7 @@ IPHONE_RELATIVE_OUTPUT = Path(
     "marketing-assets/next-version-prep/drafts/iphone-6.9-en/v1.1.3-treatment-a"
 )
 IPAD_RELATIVE_OUTPUT = Path("marketing-assets/next-version-prep/drafts/ipad-13-en/v1.1.3")
+APP_STORE_CONNECT_RELATIVE_OUTPUT = Path("marketing-assets/app-store-connect/v1.1.3")
 
 IPHONE_W, IPHONE_H = 1320, 2868
 IPAD_W, IPAD_H = 2064, 2752
@@ -37,6 +38,13 @@ JA_SERIF = Path("/System/Library/Fonts/ヒラギノ明朝 ProN.ttc")
 JA_SANS = Path("/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc")
 
 LOCALES = ("en", "zh", "zht", "ja")
+APP_STORE_CONNECT_LOCALE_DIRS = {
+    "en": "en-US",
+    "zh": "zh-Hans",
+    "zht": "zh-Hant",
+    "ja": "ja",
+}
+BRAND_MARK_BOX = (40, 90, 300, 180)
 
 LOCKED_DIR = SOURCE_ROOT / "marketing-assets/app-store-candidates/pieceful-independent-6.9"
 LOCKED_IPHONE_SOURCES = [
@@ -63,9 +71,9 @@ IPHONE_OUTPUT_FILES = [
     "01-every-piece-in-view.png",
     "02-build-outside-the-board.png",
     "03-move-pieces-together.png",
-    "04-a-finish-worth-sharing.png",
-    "05-for-every-mood.png",
-    "06-made-for-little-pauses.png",
+    "04-for-every-mood.png",
+    "05-made-for-little-pauses.png",
+    "06-a-finish-worth-sharing.png",
     "07-photos-become-puzzles.png",
     "08-hide-a-note-inside.png",
     "09-piece-together-a-memory.png",
@@ -401,6 +409,7 @@ def render_localized_treatment_poster(source_path, output, locale, index):
         return output
     with Image.open(source_path) as opened:
         source = opened.convert("RGB")
+    brand_mark = source.crop(BRAND_MARK_BOX)
     canvas = erase_flattened_green_copy(source, TREATMENT_ERASE_BOXES[index])
     source.close()
     draw = ImageDraw.Draw(canvas)
@@ -412,7 +421,6 @@ def render_localized_treatment_poster(source_path, output, locale, index):
         116 if locale != "ja" else 102,
         1140,
     )
-    draw_leaf_mark(draw, 78, 150, 1.05)
     y = 188
     for line in copy["title"]:
         draw.text((78, y), line, font=title_font, fill=GREEN)
@@ -440,6 +448,8 @@ def render_localized_treatment_poster(source_path, output, locale, index):
         draw_laurel(draw, center_x, center_y)
         badge_font = locale_sans(locale, 43 if locale != "ja" else 35)
         draw.text((center_x, center_y), copy["badge"], font=badge_font, fill=MUTED, anchor="mm")
+    canvas.paste(brand_mark, BRAND_MARK_BOX[:2])
+    brand_mark.close()
     output.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(output, format="PNG", optimize=True)
     canvas.close()
@@ -763,6 +773,7 @@ def required_sources():
     return (
         LOCKED_IPHONE_SOURCES
         + UNCHANGED_IPHONE_SOURCES
+        + [source for locale in LOCALES for source in localized_catalog_sources(locale)]
         + [COMPLETION_SOURCE, IPAD_COMPLETION_SOURCE]
         + [IPAD_SOURCE_DIR / filename for filename in IPAD_OUTPUT_FILES]
     )
@@ -772,6 +783,18 @@ def validate_sources():
     missing = [path for path in required_sources() if not path.is_file()]
     if missing:
         raise FileNotFoundError("Missing source assets:\n" + "\n".join(str(path) for path in missing))
+
+
+def localized_v8_dir(locale):
+    return SOURCE_ROOT / f"marketing-assets/next-version-prep/drafts/iphone-6.9-{locale}/v8"
+
+
+def localized_catalog_sources(locale):
+    directory = localized_v8_dir(locale)
+    return [
+        directory / "05-for-every-mood.png",
+        directory / "06-made-for-little-pauses.png",
+    ]
 
 
 def render_localized_updates(output_root=ROOT):
@@ -791,14 +814,21 @@ def render_localized_updates(output_root=ROOT):
             path = iphone_dir / filename
             render_localized_treatment_poster(source, path, locale, index)
             iphone_paths.append(path)
-        completion_path = iphone_dir / IPHONE_OUTPUT_FILES[3]
+        for filename, source in zip(
+            IPHONE_OUTPUT_FILES[3:5],
+            localized_catalog_sources(locale),
+        ):
+            path = iphone_dir / filename
+            shutil.copy2(source, path)
+            iphone_paths.append(path)
+        completion_path = iphone_dir / IPHONE_OUTPUT_FILES[5]
         render_iphone_completion(completion_path, locale)
         iphone_paths.append(completion_path)
         make_contact_sheet(
             iphone_paths,
             iphone_dir / "contact-sheet-updated.jpg",
-            columns=4,
-            thumb_width=300,
+            columns=6,
+            thumb_width=200,
         )
         ipad_path = ipad_dir / "06-finish-continue.png"
         render_ipad_completion(ipad_path, locale)
@@ -813,7 +843,7 @@ def export_website_updates(output_root=ROOT):
         iphone_source_dir = output_root / iphone_output_dir(locale)
         iphone_web_dir = output_root / f"assets/img/shots/v8/{locale}"
         iphone_web_dir.mkdir(parents=True, exist_ok=True)
-        for number, filename in enumerate(IPHONE_OUTPUT_FILES[:4], start=1):
+        for number, filename in enumerate(IPHONE_OUTPUT_FILES[:6], start=1):
             source_path = iphone_source_dir / filename
             output_path = iphone_web_dir / f"{number:02d}.jpg"
             with Image.open(source_path) as opened:
@@ -834,6 +864,27 @@ def export_website_updates(output_root=ROOT):
     return exported
 
 
+def export_app_store_connect_updates(output_root=ROOT):
+    output_root = Path(output_root)
+    exported = []
+    for locale, locale_dir in APP_STORE_CONNECT_LOCALE_DIRS.items():
+        destination = output_root / APP_STORE_CONNECT_RELATIVE_OUTPUT / locale_dir
+        iphone_dir = destination / "iphone-6.9"
+        ipad_dir = destination / "ipad-13"
+        iphone_dir.mkdir(parents=True, exist_ok=True)
+        ipad_dir.mkdir(parents=True, exist_ok=True)
+        for filename in IPHONE_OUTPUT_FILES[:6]:
+            source = output_root / iphone_output_dir(locale) / filename
+            output = iphone_dir / filename
+            shutil.copy2(source, output)
+            exported.append(output)
+        ipad_source = output_root / ipad_output_dir(locale) / IPAD_OUTPUT_FILES[5]
+        ipad_output = ipad_dir / IPAD_OUTPUT_FILES[5]
+        shutil.copy2(ipad_source, ipad_output)
+        exported.append(ipad_output)
+    return exported
+
+
 def render_all(output_root=ROOT):
     output_root = Path(output_root)
     validate_sources()
@@ -844,8 +895,10 @@ def render_all(output_root=ROOT):
 
     for filename, source in zip(IPHONE_OUTPUT_FILES[:3], LOCKED_IPHONE_SOURCES):
         shutil.copy2(source, iphone_dir / filename)
-    render_iphone_completion(iphone_dir / IPHONE_OUTPUT_FILES[3])
-    for filename, source in zip(IPHONE_OUTPUT_FILES[4:], UNCHANGED_IPHONE_SOURCES):
+    for filename, source in zip(IPHONE_OUTPUT_FILES[3:5], UNCHANGED_IPHONE_SOURCES[:2]):
+        shutil.copy2(source, iphone_dir / filename)
+    render_iphone_completion(iphone_dir / IPHONE_OUTPUT_FILES[5])
+    for filename, source in zip(IPHONE_OUTPUT_FILES[6:], UNCHANGED_IPHONE_SOURCES[2:]):
         shutil.copy2(source, iphone_dir / filename)
 
     for filename in IPAD_OUTPUT_FILES:
@@ -862,6 +915,7 @@ def render_all(output_root=ROOT):
 
 def main():
     iphone_paths, ipad_paths = render_all()
+    export_app_store_connect_updates()
     for path in iphone_paths + ipad_paths:
         print(path)
 
