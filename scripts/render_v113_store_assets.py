@@ -253,7 +253,7 @@ def treatment_background():
 
 
 TREATMENT_ERASE_BOXES = {
-    1: ((35, 85, 1140, 610), (35, 575, 760, 930)),
+    1: ((35, 85, 1140, 610),),
     2: ((35, 85, 1250, 620), (1030, 1960, 1315, 2215)),
     3: ((35, 85, 1140, 650), (35, 630, 780, 980)),
 }
@@ -417,14 +417,7 @@ def render_localized_treatment_poster(source_path, output, locale, index):
     for line in copy["title"]:
         draw.text((78, y), line, font=title_font, fill=GREEN)
         y += title_size + 28
-    if index == 1:
-        center_x, center_y = 275, 705
-        draw_laurel(draw, center_x, center_y)
-        badge_font = locale_sans(locale, 43 if locale != "ja" else 36)
-        draw.text((center_x, center_y - 22), copy["badge"], font=badge_font, fill=MUTED, anchor="mm")
-        stars = "★★★★★"
-        draw.text((center_x, center_y + 40), stars, font=locale_sans(locale, 31), fill=MUTED, anchor="mm")
-    elif index == 2:
+    if index == 2:
         note_font = locale_sans(locale, 40 if locale != "ja" else 34)
         note = copy["group"]
         if locale == "zh":
@@ -442,7 +435,7 @@ def render_localized_treatment_poster(source_path, output, locale, index):
             align="center",
             spacing=4,
         )
-    else:
+    elif index == 3:
         center_x, center_y = 280, 760
         draw_laurel(draw, center_x, center_y)
         badge_font = locale_sans(locale, 43 if locale != "ja" else 35)

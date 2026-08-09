@@ -141,6 +141,25 @@ class V113StoreAssetTests(unittest.TestCase):
                 self.assertEqual(image.size, (2064, 2752), locale)
 
 class RendererHelperTests(unittest.TestCase):
+    def test_localized_page_one_preserves_original_classic_play_badge(self):
+        renderer = load_renderer()
+        with tempfile.TemporaryDirectory() as tempdir:
+            output = Path(tempdir) / "01.png"
+            renderer.render_localized_treatment_poster(
+                renderer.LOCKED_IPHONE_SOURCES[0],
+                output,
+                "zh",
+                1,
+            )
+            badge_box = (35, 650, 760, 900)
+            with Image.open(renderer.LOCKED_IPHONE_SOURCES[0]) as source:
+                expected = source.convert("RGB").crop(badge_box)
+            with Image.open(output) as localized:
+                actual = localized.convert("RGB").crop(badge_box)
+            self.assertEqual(actual.tobytes(), expected.tobytes())
+            actual.close()
+            expected.close()
+
     def test_dark_copy_removal_preserves_the_surrounding_gradient(self):
         renderer = load_renderer()
         erase = getattr(renderer, "erase_flattened_dark_copy", None)
