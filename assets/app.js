@@ -93,7 +93,7 @@
       b.classList.toggle("on", b.dataset.lang === lang);
     });
     document.querySelectorAll("[data-localized-shot]").forEach(function (img) {
-      img.src = "assets/img/shots/v8/" + lang + "/" + img.dataset.localizedShot + ".jpg?v=3";
+      img.src = "assets/img/shots/v8/" + lang + "/" + img.dataset.localizedShot + ".jpg?v=4";
     });
     document.querySelectorAll("[data-localized-ipad-shot]").forEach(function (img) {
       img.src = "assets/img/shots/v113-ipad/" + lang + "/" + img.dataset.localizedIpadShot + ".jpg?v=1";

@@ -141,6 +141,11 @@ class V113StoreAssetTests(unittest.TestCase):
                 self.assertEqual(image.size, (2064, 2752), locale)
 
 class RendererHelperTests(unittest.TestCase):
+    def test_chinese_page_one_uses_approved_piece_wording(self):
+        renderer = load_renderer()
+        self.assertEqual(renderer.TREATMENT_COPY["zh"][0]["title"], ("全部碎片", "一目了然"))
+        self.assertEqual(renderer.TREATMENT_COPY["zht"][0]["title"], ("全部碎片", "一目瞭然"))
+
     def test_localized_page_one_preserves_original_classic_play_badge(self):
         renderer = load_renderer()
         with tempfile.TemporaryDirectory() as tempdir:
