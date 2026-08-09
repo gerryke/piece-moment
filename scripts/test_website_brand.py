@@ -33,9 +33,11 @@ class WebsiteBrandTests(unittest.TestCase):
         index = (ROOT / "index.html").read_text()
         app_js = (ROOT / "assets" / "app.js").read_text()
         self.assertIn('data-localized-ipad-shot="06"', index)
-        self.assertIn('assets/app.js?v=12', index)
+        self.assertIn('assets/app.js?v=13', index)
         self.assertIn("assets/img/shots/v113-ipad/", app_js)
-        self.assertIn('.jpg?v=5', app_js)
+        self.assertIn('lang !== "en" && shotNumber <= 3 ? 6 : 5', app_js)
+        self.assertIn('01.jpg?v=5', index)
+        self.assertNotIn('01.jpg?v=6', index)
         for locale in ("en", "zh", "zht", "ja"):
             for number in ("01", "02", "03", "04", "05", "06"):
                 self.assertTrue((ROOT / f"assets/img/shots/v8/{locale}/{number}.jpg").is_file())

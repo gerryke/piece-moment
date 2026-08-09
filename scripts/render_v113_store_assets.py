@@ -44,7 +44,13 @@ APP_STORE_CONNECT_LOCALE_DIRS = {
     "zht": "zh-Hant",
     "ja": "ja",
 }
-BRAND_MARK_BOX = (40, 90, 300, 180)
+BRAND_MARK_BOXES = {
+    1: (35, 85, 390, 205),
+    2: (35, 150, 400, 250),
+    3: (35, 85, 390, 205),
+}
+TREATMENT_TITLE_Y = {1: 210, 2: 255, 3: 210}
+PAGE_THREE_BADGE_BOX = (60, 660, 650, 940)
 
 LOCKED_DIR = SOURCE_ROOT / "marketing-assets/app-store-candidates/pieceful-independent-6.9"
 LOCKED_IPHONE_SOURCES = [
@@ -409,7 +415,9 @@ def render_localized_treatment_poster(source_path, output, locale, index):
         return output
     with Image.open(source_path) as opened:
         source = opened.convert("RGB")
-    brand_mark = source.crop(BRAND_MARK_BOX)
+    brand_mark_box = BRAND_MARK_BOXES[index]
+    brand_mark = source.crop(brand_mark_box)
+    page_three_badge = source.crop(PAGE_THREE_BADGE_BOX) if index == 3 else None
     canvas = erase_flattened_green_copy(source, TREATMENT_ERASE_BOXES[index])
     source.close()
     draw = ImageDraw.Draw(canvas)
@@ -421,7 +429,7 @@ def render_localized_treatment_poster(source_path, output, locale, index):
         116 if locale != "ja" else 102,
         1140,
     )
-    y = 188
+    y = TREATMENT_TITLE_Y[index]
     for line in copy["title"]:
         draw.text((78, y), line, font=title_font, fill=GREEN)
         y += title_size + 28
@@ -443,13 +451,11 @@ def render_localized_treatment_poster(source_path, output, locale, index):
             align="center",
             spacing=4,
         )
-    elif index == 3:
-        center_x, center_y = 280, 760
-        draw_laurel(draw, center_x, center_y)
-        badge_font = locale_sans(locale, 43 if locale != "ja" else 35)
-        draw.text((center_x, center_y), copy["badge"], font=badge_font, fill=MUTED, anchor="mm")
-    canvas.paste(brand_mark, BRAND_MARK_BOX[:2])
+    canvas.paste(brand_mark, brand_mark_box[:2])
     brand_mark.close()
+    if page_three_badge is not None:
+        canvas.paste(page_three_badge, PAGE_THREE_BADGE_BOX[:2])
+        page_three_badge.close()
     output.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(output, format="PNG", optimize=True)
     canvas.close()

@@ -60,10 +60,21 @@ class V113StoreAssetTests(unittest.TestCase):
         )
 
     def test_all_localized_brand_marks_match_their_english_sources(self):
-        box = getattr(self.renderer, "BRAND_MARK_BOX", None)
-        self.assertIsNotNone(box, "renderer must define the locked brand-mark crop")
-        if box is None:
-            return
+        boxes = {
+            1: (35, 85, 390, 205),
+            2: (35, 150, 400, 250),
+            3: (35, 85, 390, 205),
+        }
+        self.assertEqual(
+            getattr(self.renderer, "BRAND_MARK_BOXES", None),
+            boxes,
+            "renderer must lock each source's complete line-and-leaf brand mark",
+        )
+        self.assertEqual(
+            getattr(self.renderer, "TREATMENT_TITLE_Y", None),
+            {1: 210, 2: 255, 3: 210},
+            "localized titles must begin below each locked brand mark",
+        )
         for locale in ("zh", "zht", "ja"):
             for index, source in enumerate(self.renderer.LOCKED_IPHONE_SOURCES, start=1):
                 output = (
@@ -72,11 +83,27 @@ class V113StoreAssetTests(unittest.TestCase):
                     / self.renderer.IPHONE_OUTPUT_FILES[index - 1]
                 )
                 with Image.open(source) as expected_image, Image.open(output) as actual_image:
-                    expected = expected_image.convert("RGB").crop(box)
-                    actual = actual_image.convert("RGB").crop(box)
+                    expected = expected_image.convert("RGB").crop(boxes[index])
+                    actual = actual_image.convert("RGB").crop(boxes[index])
                 self.assertEqual(actual.tobytes(), expected.tobytes(), (locale, index))
                 actual.close()
                 expected.close()
+
+    def test_localized_page_three_preserves_original_place_as_one_badge(self):
+        box = (60, 660, 650, 940)
+        source = self.renderer.LOCKED_IPHONE_SOURCES[2]
+        for locale in ("zh", "zht", "ja"):
+            output = (
+                self.output_root
+                / self.renderer.iphone_output_dir(locale)
+                / self.renderer.IPHONE_OUTPUT_FILES[2]
+            )
+            with Image.open(source) as expected_image, Image.open(output) as actual_image:
+                expected = expected_image.convert("RGB").crop(box)
+                actual = actual_image.convert("RGB").crop(box)
+            self.assertEqual(actual.tobytes(), expected.tobytes(), locale)
+            actual.close()
+            expected.close()
 
     def test_all_outputs_have_app_store_dimensions(self):
         iphone_dir = self.output_root / self.renderer.IPHONE_RELATIVE_OUTPUT

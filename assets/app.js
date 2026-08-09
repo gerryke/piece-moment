@@ -93,7 +93,9 @@
       b.classList.toggle("on", b.dataset.lang === lang);
     });
     document.querySelectorAll("[data-localized-shot]").forEach(function (img) {
-      img.src = "assets/img/shots/v8/" + lang + "/" + img.dataset.localizedShot + ".jpg?v=5";
+      var shotNumber = Number(img.dataset.localizedShot);
+      var version = lang !== "en" && shotNumber <= 3 ? 6 : 5;
+      img.src = "assets/img/shots/v8/" + lang + "/" + img.dataset.localizedShot + ".jpg?v=" + version;
     });
     document.querySelectorAll("[data-localized-ipad-shot]").forEach(function (img) {
       img.src = "assets/img/shots/v113-ipad/" + lang + "/" + img.dataset.localizedIpadShot + ".jpg?v=1";
