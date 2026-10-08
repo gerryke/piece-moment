@@ -5,8 +5,8 @@
 
     "hero.eyebrow":  { en:"Cozy Jigsaw", zh:"片刻：休闲拼图", zht:"片刻：休閒拼圖", ja:"片刻：癒しのジグソーパズル" },
     "hero.h1":       { en:"Antistress puzzles<br><em>for short breaks.</em>", zh:"碎片时间里的<br><em>放松解压。</em>", zht:"零碎時間裡的<br><em>放鬆紓壓。</em>", ja:"すきま時間に<br><em>ストレス解消。</em>" },
-    "hero.lead":     { en:"Open it for a short break, a long wait, travel, or bedtime. Browse gentle picture collections, pick a difficulty, and finish at your own pace — no account, no ads, no network needed.", zh:"适合碎片时间、旅途、等待、等餐或睡前打开。浏览柔和的图片收藏，挑选拼图难度，按照自己的节奏慢慢完成——不需登录账号，没有广告，也不需要联网。", zht:"適合零碎時間、旅途、等待、等餐或睡前打開。瀏覽柔和的圖片收藏，挑選拼圖難度，按照自己的節奏慢慢完成——不需登入帳號，沒有廣告，也不需網路連線。", ja:"すきま時間、旅先、待ち時間、食事待ち、寝る前に。やさしい画像コレクションから選び、難易度を決めて、自分のペースで仕上げる——アカウント不要、広告なし、ネット接続も不要。" },
-    "hero.m1":       { en:"No ads", zh:"无广告", zht:"無廣告", ja:"広告なし" },
+    "hero.lead":     { en:"Open it for a short break, a long wait, travel, or bedtime. Browse gentle picture collections, pick a difficulty, and finish at your own pace — no account, no network needed, and ads only if you choose to watch one.", zh:"适合碎片时间、旅途、等待、等餐或睡前打开。浏览柔和的图片收藏，挑选拼图难度，按照自己的节奏慢慢完成——不需登录账号，也不需要联网，广告只在你主动选择观看时才会出现。", zht:"適合零碎時間、旅途、等待、等餐或睡前打開。瀏覽柔和的圖片收藏，挑選拼圖難度，按照自己的節奏慢慢完成——不需登入帳號，也不需網路連線，廣告只在你主動選擇觀看時才會出現。", ja:"すきま時間、旅先、待ち時間、食事待ち、寝る前に。やさしい画像コレクションから選び、難易度を決めて、自分のペースで仕上げる——アカウント不要、ネット接続も不要、広告はあなたが見ると選んだときだけ。" },
+    "hero.m1":       { en:"Ads only by choice", zh:"广告仅自愿观看", zht:"廣告僅自願觀看", ja:"広告は任意" },
     "hero.m2":       { en:"Offline", zh:"可离线", zht:"可離線", ja:"オフライン" },
     "hero.m3":       { en:"No account", zh:"无需账号", zht:"不需帳號", ja:"アカウント不要" },
 
@@ -20,7 +20,7 @@
     "c2.h":          { en:"Play your way", zh:"你的节奏", zht:"你的節奏", ja:"自分のペースで" },
     "c2.p":          { en:"Easy or challenging grids, two piece shapes. Move each piece without pressure — and your progress saves automatically.", zh:"从简单到挑战的格子，两种拼图形状。不用赶时间，一片一片慢慢放——进度还会自动保存。", zht:"從簡單到挑戰的格子，兩種拼圖形狀。不用趕時間，一片一片慢慢放——進度還會自動保存。", ja:"やさしい難易度から手ごたえのあるものまで、ピースの形は2種類。急がず一片ずつ。進行状況は自動で保存されます。" },
     "c3.h":          { en:"Calm by design", zh:"纯净体验", zht:"純淨體驗", ja:"静けさのための設計" },
-    "c3.p":          { en:"No ads, no account, no network needed. Open it anytime, anywhere, and just breathe for a minute.", zh:"没有广告，不需账号，不需联网。随时随地打开，给自己一分钟，好好呼吸。", zht:"沒有廣告，不需帳號，不需連網。隨時隨地打開，給自己一分鐘，好好呼吸。", ja:"広告なし、アカウント不要、ネット接続も不要。いつでもどこでも開いて、ひと息つきましょう。" },
+    "c3.p":          { en:"No account, no network needed, and ads only if you choose. Open it anytime, anywhere, and just breathe for a minute.", zh:"不需账号，不需联网，广告只在你主动选择时才出现。随时随地打开，给自己一分钟，好好呼吸。", zht:"不需帳號，不需連網，廣告只在你主動選擇時才出現。隨時隨地打開，給自己一分鐘，好好呼吸。", ja:"アカウント不要、ネット接続も不要、広告はあなたが選んだときだけ。いつでもどこでも開いて、ひと息つきましょう。" },
     "c4.h":          { en:"Your own moments", zh:"你自己的记忆", zht:"你自己的記憶", ja:"あなただけの思い出" },
     "c4.p":          { en:"Bring in your own photos. A child's drawing, a favorite meal, a travel snapshot — turn it into a puzzle to return to.", zh:"导入你自己的照片。孩子的一幅画、喜欢的一餐、旅途的一张照片——都能变成一张值得回来拼的拼图。", zht:"匯入你自己的照片。孩子的一幅畫、喜歡的一餐、旅途的一張照片——都能變成一張值得回來拼的拼圖。", ja:"自分の写真を取り込んで。子どもの絵、お気に入りの食事、旅先の一枚を、また戻ってきたくなるパズルに。" },
 

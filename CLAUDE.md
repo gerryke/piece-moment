@@ -43,7 +43,7 @@ python3 -m http.server 4321
 
 ## 内容约束
 
-- **这是付费 App**：任何文案都不能出现 "Free / 免费 / 无料で始" 之类暗示免费下载的措辞（卖点用「无广告 / 无账号 / 可离线」）。
+- **这是付费 App**：任何文案都不能出现 "Free / 免费 / 无料で始" 之类暗示免费下载的措辞（卖点用「无打扰广告（仅玩家主动选择时出现）/ 无账号 / 可离线」，不再写「无广告」）。
 - 四语文案的语气对齐 App Store 上架文案：`/Users/keyipeng/Dev/jigsaw_test/screenshots/app-store/app-store-listing-copy.md`（含简/繁/日官方描述）。
 - 排名成就（付费榜 #7 等）如实表述为"曾登上"的过去战绩，数字来自 App Store 真实截图。
 
